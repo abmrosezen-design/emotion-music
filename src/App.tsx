@@ -33,6 +33,7 @@ import {
   type RecommendationAnswers,
 } from './recommendation'
 import { analyzeDescription } from './textAnalysis'
+import GlowCursor from './components/GlowCursor'
 
 type View = 'hero' | 'quiz' | 'result'
 
@@ -1019,38 +1020,59 @@ function App() {
   }
 
   return (
-    <div
-      className="min-h-screen overflow-x-hidden bg-black text-white"
-      style={{ fontFamily: "'Inter', sans-serif" }}
+    <GlowCursor
+      color="#72D6E3"
+      secondaryColor="#D6A15C"
+      trailLength={36}
+      trailWidth={7}
+      trailTaper={0.84}
+      followSpeed={0.16}
+      glowIntensity={1.65}
+      glowSpread={1.15}
+      hotspot={0.66}
+      brightness={1.15}
+      opacity={0.82}
+      pulseSpeed={0.9}
+      noiseStrength={0.025}
+      idleFade
+      idleTimeout={650}
+      fadeDuration={850}
+      blendMode="screen"
+      maxDevicePixelRatio={1.35}
     >
-      <VideoBackdrop dimmed={view !== 'hero'} />
-      <div className="grain" />
-      <Header view={view} onHome={goHome} onPrivacy={() => setPrivacyOpen(true)} />
-      {privacyOpen && <PrivacyModal onClose={() => setPrivacyOpen(false)} />}
+      <div
+        className="min-h-screen overflow-x-hidden bg-black text-white"
+        style={{ fontFamily: "'Inter', sans-serif" }}
+      >
+        <VideoBackdrop dimmed={view !== 'hero'} />
+        <div className="grain" />
+        <Header view={view} onHome={goHome} onPrivacy={() => setPrivacyOpen(true)} />
+        {privacyOpen && <PrivacyModal onClose={() => setPrivacyOpen(false)} />}
 
-      {view === 'hero' && (
-        <Hero visible={heroVisible} onStart={startQuiz} onDescribe={recommendFromDescription} />
-      )}
-      {view === 'quiz' && (
-        <Quiz
-          step={step}
-          answers={answers}
-          onSelect={selectCurrent}
-          onBack={back}
-          onNext={next}
-          panelRef={panelRef}
-        />
-      )}
-      {view === 'result' && requiredAnswers && currentSong && (
-        <Result
-          answers={requiredAnswers}
-          song={currentSong}
-          onAgain={chooseAnother}
-          onRestart={restart}
-          panelRef={panelRef}
-        />
-      )}
-    </div>
+        {view === 'hero' && (
+          <Hero visible={heroVisible} onStart={startQuiz} onDescribe={recommendFromDescription} />
+        )}
+        {view === 'quiz' && (
+          <Quiz
+            step={step}
+            answers={answers}
+            onSelect={selectCurrent}
+            onBack={back}
+            onNext={next}
+            panelRef={panelRef}
+          />
+        )}
+        {view === 'result' && requiredAnswers && currentSong && (
+          <Result
+            answers={requiredAnswers}
+            song={currentSong}
+            onAgain={chooseAnother}
+            onRestart={restart}
+            panelRef={panelRef}
+          />
+        )}
+      </div>
+    </GlowCursor>
   )
 }
 

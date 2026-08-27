@@ -35,6 +35,10 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 ::selection {
   background: rgba(255, 255, 255, 0.22);
   color: #fff;
