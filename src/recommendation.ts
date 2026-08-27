@@ -5,6 +5,7 @@ import {
   type MoodId,
   type Song,
 } from './data'
+import { getLocalPreferenceScore, type LocalPreferenceProfile } from './localFeedback'
 
 export interface RecommendationAnswers {
   mood: MoodId
@@ -28,6 +29,7 @@ export function pickRecommendedSong(
   answers: RecommendationAnswers,
   excludedSongIds: string[] = [],
   catalog: Song[] = songs,
+  profile?: LocalPreferenceProfile,
 ): Song {
   const languagePool = getLanguagePool(answers, catalog)
 
@@ -36,7 +38,9 @@ export function pickRecommendedSong(
   }
 
   const unseenSongs = languagePool.filter((song) => !excludedSongIds.includes(song.id))
-  const candidatePool = unseenSongs.length > 0 ? unseenSongs : languagePool
+  const initialPool = unseenSongs.length > 0 ? unseenSongs : languagePool
+  const locallyAllowed = initialPool.filter((song) => !profile?.dislikedSongIds.includes(song.id))
+  const candidatePool = locallyAllowed.length > 0 ? locallyAllowed : initialPool
 
   const ranked = candidatePool
     .map((song) => {
@@ -45,6 +49,8 @@ export function pickRecommendedSong(
       if (answers.genre === 'random' || song.genres.includes(answers.genre)) {
         score += 30
       }
+
+      score += getLocalPreferenceScore(song, profile)
 
       // A small exploration factor varies recommendations without ever
       // bypassing the selected language pool.

@@ -34,6 +34,18 @@ import {
 } from './recommendation'
 import { analyzeDescription } from './textAnalysis'
 import GlowCursor from './components/GlowCursor'
+import {
+  clearLocalPreferenceProfile,
+  createDefaultPreferenceProfile,
+  createRecommendationId,
+  feedbackReasonOptions,
+  loadLocalPreferenceProfile,
+  recordLocalFeedback,
+  saveLocalPreferenceProfile,
+  type FeedbackReason,
+  type LocalFeedbackAction,
+  type LocalPreferenceProfile,
+} from './localFeedback'
 
 type View = 'hero' | 'quiz' | 'result'
 
@@ -272,9 +284,16 @@ function Header({
   )
 }
 
-function PrivacyModal({ onClose }: { onClose: () => void }) {
+function PrivacyModal({
+  onClose,
+  onClearLocalData,
+}: {
+  onClose: () => void
+  onClearLocalData: () => void
+}) {
   const dialogRef = useRef<HTMLElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const [cleared, setCleared] = useState(false)
 
   useEffect(() => {
     const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null
@@ -355,15 +374,26 @@ function PrivacyModal({ onClose }: { onClose: () => void }) {
 
         <div className="mt-6 space-y-4 border-y border-white/10 py-6 font-body text-[13px] leading-relaxed text-white/65">
           <p><span className="mr-2 text-white">01</span>无需注册或绑定音乐账号，首页文字描述与问答选择只在当前页面中分析并用于生成本次推荐。</p>
-          <p><span className="mr-2 text-white">02</span>“此刻想对你说”的内容只有在你主动勾选同意并提交后，才会匿名保存在当前浏览器。</p>
-          <p><span className="mr-2 text-white">03</span>原型阶段不会将这些内容上传服务器；清除本站浏览器数据即可删除本地记录。</p>
-          <p><span className="mr-2 text-white">04</span>前往网易云音乐、QQ 音乐、酷狗音乐、哔哩哔哩、抖音或 Spotify 后，将适用对应平台的隐私规则。</p>
+          <p><span className="mr-2 text-white">02</span>“符合”“不太符合”、换歌与站外搜索反馈只保存在当前浏览器，用于即时调整之后的推荐。</p>
+          <p><span className="mr-2 text-white">03</span>“此刻想对你说”的内容只有在你主动勾选同意并提交后，才会保存在当前浏览器。</p>
+          <p><span className="mr-2 text-white">04</span>原型阶段不会将上述数据上传服务器；你可以随时使用下方按钮清除全部本地记录。</p>
+          <p><span className="mr-2 text-white">05</span>前往网易云音乐、QQ 音乐、酷狗音乐、哔哩哔哩、抖音或 Spotify 后，将适用对应平台的隐私规则。</p>
         </div>
 
         <button
           type="button"
+          onClick={() => {
+            onClearLocalData()
+            setCleared(true)
+          }}
+          className="mt-6 w-full rounded-full border border-white/14 bg-white/[0.04] px-6 py-3 text-[13px] font-medium text-white/65 transition-colors hover:bg-white/[0.09] hover:text-white"
+        >
+          {cleared ? '本地反馈与文字已清除' : '清除本地反馈与文字'}
+        </button>
+        <button
+          type="button"
           onClick={onClose}
-          className="mt-6 w-full rounded-full bg-white px-6 py-3 text-[13px] font-medium text-black transition-transform hover:scale-[1.01] active:scale-[0.98]"
+          className="mt-3 w-full rounded-full bg-white px-6 py-3 text-[13px] font-medium text-black transition-transform hover:scale-[1.01] active:scale-[0.98]"
         >
           我知道了
         </button>
@@ -613,14 +643,18 @@ function AlbumArtwork({ song }: { song: Song }) {
 function Result({
   answers,
   song,
+  recommendationId,
   onAgain,
   onRestart,
+  onFeedback,
   panelRef,
 }: {
   answers: Required<Answers>
   song: Song
+  recommendationId: string
   onAgain: () => void
   onRestart: () => void
+  onFeedback: (action: LocalFeedbackAction, reasons?: FeedbackReason[]) => void
   panelRef: React.RefObject<HTMLDivElement | null>
 }) {
   const [reflection, setReflection] = useState('')
@@ -628,8 +662,18 @@ function Result({
   const [saved, setSaved] = useState(false)
   const [saveError, setSaveError] = useState(false)
   const [feedback, setFeedback] = useState<'yes' | 'no' | null>(null)
+  const [selectedReasons, setSelectedReasons] = useState<FeedbackReason[]>([])
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
+  const [platformRecorded, setPlatformRecorded] = useState(false)
   const copy = moodCopy[answers.mood]
   const query = `${song.title} ${song.artist}`
+
+  useEffect(() => {
+    setFeedback(null)
+    setSelectedReasons([])
+    setFeedbackSubmitted(false)
+    setPlatformRecorded(false)
+  }, [song.id, recommendationId])
 
   const platforms = [
     {
@@ -694,9 +738,29 @@ function Result({
     }
   }
 
+  const submitLike = () => {
+    if (feedbackSubmitted) return
+    setFeedback('yes')
+    setFeedbackSubmitted(true)
+    onFeedback('like')
+  }
+
+  const submitDislike = () => {
+    if (feedbackSubmitted) return
+    setFeedbackSubmitted(true)
+    onFeedback('dislike', selectedReasons)
+    onAgain()
+  }
+
+  const swapSong = () => {
+    if (!feedbackSubmitted) onFeedback('swap')
+    onAgain()
+  }
+
   return (
     <main
       data-song-language={song.language}
+      data-recommendation-id={recommendationId}
       className="soft-scrollbar fixed inset-0 z-20 overflow-y-auto px-4 pb-10 pt-24 md:px-8 md:pt-28"
     >
       <div ref={panelRef} className="mx-auto w-full max-w-[1180px]">
@@ -766,6 +830,11 @@ function Result({
                     href={platform.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      if (platformRecorded) return
+                      setPlatformRecorded(true)
+                      onFeedback('platform_click')
+                    }}
                     className="group flex items-center justify-between rounded-[16px] border border-white/10 bg-white/[0.045] px-4 py-3.5 transition-all hover:border-white/30 hover:bg-white/[0.1]"
                   >
                     <div>
@@ -778,42 +847,91 @@ function Result({
               </div>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="mr-1 font-body text-[11px] text-white/40">符合此刻吗？</span>
+            <div className="mt-5">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="mr-1 font-body text-[11px] text-white/40">符合此刻吗？</span>
+                  <button
+                    type="button"
+                    onClick={submitLike}
+                    disabled={feedbackSubmitted}
+                    className={`flex h-9 items-center gap-1.5 rounded-full border px-3 text-[11px] transition-all disabled:cursor-default ${
+                      feedback === 'yes'
+                        ? 'border-white bg-white text-black'
+                        : 'border-white/12 bg-white/[0.04] text-white/60 hover:text-white disabled:opacity-45'
+                    }`}
+                  >
+                    <Heart size={12} fill={feedback === 'yes' ? 'currentColor' : 'none'} />
+                    {feedback === 'yes' ? '已记住' : '符合'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (!feedbackSubmitted) setFeedback(feedback === 'no' ? null : 'no')
+                    }}
+                    disabled={feedbackSubmitted}
+                    aria-expanded={feedback === 'no'}
+                    className={`flex h-9 items-center gap-1.5 rounded-full border px-3 text-[11px] transition-all disabled:cursor-default ${
+                      feedback === 'no'
+                        ? 'border-white bg-white text-black'
+                        : 'border-white/12 bg-white/[0.04] text-white/60 hover:text-white disabled:opacity-45'
+                    }`}
+                  >
+                    <X size={12} />
+                    不太符合
+                  </button>
+                </div>
                 <button
                   type="button"
-                  onClick={() => setFeedback('yes')}
-                  className={`flex h-9 items-center gap-1.5 rounded-full border px-3 text-[11px] transition-all ${
-                    feedback === 'yes'
-                      ? 'border-white bg-white text-black'
-                      : 'border-white/12 bg-white/[0.04] text-white/60 hover:text-white'
-                  }`}
+                  onClick={swapSong}
+                  className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-medium text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <Heart size={12} fill={feedback === 'yes' ? 'currentColor' : 'none'} />
-                  符合
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setFeedback('no')}
-                  className={`flex h-9 items-center gap-1.5 rounded-full border px-3 text-[11px] transition-all ${
-                    feedback === 'no'
-                      ? 'border-white bg-white text-black'
-                      : 'border-white/12 bg-white/[0.04] text-white/60 hover:text-white'
-                  }`}
-                >
-                  <X size={12} />
-                  不太符合
+                  <RefreshCw size={13} />
+                  换一首
                 </button>
               </div>
-              <button
-                type="button"
-                onClick={onAgain}
-                className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[12px] font-medium text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <RefreshCw size={13} />
-                换一首
-              </button>
+
+              {feedback === 'yes' && (
+                <p role="status" className="mt-3 font-body text-[10px] leading-relaxed text-emerald-100/55">
+                  已保存在当前浏览器，并会影响之后的推荐。
+                </p>
+              )}
+
+              {feedback === 'no' && !feedbackSubmitted && (
+                <div className="mt-4 rounded-[18px] border border-white/10 bg-black/20 p-4">
+                  <p className="font-body text-[11px] text-white/55">哪里不太对？可多选，也可以直接换一首。</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {feedbackReasonOptions.map((reason) => {
+                      const selected = selectedReasons.includes(reason.id)
+                      return (
+                        <button
+                          key={reason.id}
+                          type="button"
+                          aria-pressed={selected}
+                          onClick={() => setSelectedReasons((current) => selected
+                            ? current.filter((id) => id !== reason.id)
+                            : [...current, reason.id])}
+                          className={`rounded-full border px-3 py-2 font-body text-[10px] transition-colors ${
+                            selected
+                              ? 'border-white/70 bg-white text-black'
+                              : 'border-white/12 bg-white/[0.035] text-white/55 hover:border-white/30 hover:text-white'
+                          }`}
+                        >
+                          {reason.label}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={submitDislike}
+                    className="mt-4 flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-4 py-2.5 text-[11px] font-medium text-white transition-colors hover:bg-white/[0.14]"
+                  >
+                    <RefreshCw size={12} />
+                    应用反馈并换一首
+                  </button>
+                </div>
+              )}
             </div>
           </section>
 
@@ -907,7 +1025,12 @@ function App() {
   const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<Answers>({})
   const [currentSong, setCurrentSong] = useState<Song | null>(null)
+  const [recommendationId, setRecommendationId] = useState('')
   const [seenSongIds, setSeenSongIds] = useState<string[]>([])
+  const [localPreferenceProfile, setLocalPreferenceProfile] = useState<LocalPreferenceProfile>(
+    () => loadLocalPreferenceProfile(),
+  )
+  const localPreferenceRef = useRef(localPreferenceProfile)
   const panelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -936,11 +1059,57 @@ function App() {
     return answers as Required<Answers>
   }, [answers])
 
+  const persistLocalProfile = (profile: LocalPreferenceProfile) => {
+    localPreferenceRef.current = profile
+    setLocalPreferenceProfile(profile)
+    saveLocalPreferenceProfile(profile)
+  }
+
+  const registerRecommendation = (completed: Required<Answers>, song: Song) => {
+    const id = createRecommendationId()
+    setRecommendationId(id)
+    persistLocalProfile(recordLocalFeedback(localPreferenceRef.current, {
+      recommendationId: id,
+      song,
+      answers: completed,
+      action: 'impression',
+    }))
+  }
+
+  const handleLocalFeedback = (action: LocalFeedbackAction, reasons: FeedbackReason[] = []) => {
+    if (!requiredAnswers || !currentSong || !recommendationId) return
+    persistLocalProfile(recordLocalFeedback(localPreferenceRef.current, {
+      recommendationId,
+      song: currentSong,
+      answers: requiredAnswers,
+      action,
+      reasons,
+    }))
+  }
+
+  const clearAllLocalData = () => {
+    const emptyProfile = createDefaultPreferenceProfile()
+    clearLocalPreferenceProfile()
+    try {
+      localStorage.removeItem('emotion-music-reflections')
+    } catch {
+      // The in-memory profile is still cleared if browser storage is unavailable.
+    }
+    localPreferenceRef.current = emptyProfile
+    setLocalPreferenceProfile(emptyProfile)
+  }
+
   const chooseSong = (excluded: string[] = []) => {
     if (!requiredAnswers) return
-    const next = pickRecommendedSong(requiredAnswers as RecommendationAnswers, excluded)
+    const next = pickRecommendedSong(
+      requiredAnswers as RecommendationAnswers,
+      excluded,
+      undefined,
+      localPreferenceRef.current,
+    )
     setCurrentSong(next)
     setSeenSongIds((previous) => [...previous, next.id])
+    registerRecommendation(requiredAnswers, next)
   }
 
   const startQuiz = () => {
@@ -953,12 +1122,13 @@ function App() {
 
   const recommendFromDescription = (description: string) => {
     const inferredAnswers = analyzeDescription(description)
-    const selectedSong = pickRecommendedSong(inferredAnswers)
+    const selectedSong = pickRecommendedSong(inferredAnswers, [], undefined, localPreferenceRef.current)
 
     setHeroVisible(false)
     setAnswers(inferredAnswers)
     setCurrentSong(selectedSong)
     setSeenSongIds([selectedSong.id])
+    registerRecommendation(inferredAnswers, selectedSong)
     window.setTimeout(() => setView('result'), 320)
   }
 
@@ -967,6 +1137,7 @@ function App() {
     setStep(0)
     setAnswers({})
     setCurrentSong(null)
+    setRecommendationId('')
     setSeenSongIds([])
     window.setTimeout(() => setHeroVisible(true), 100)
   }
@@ -995,9 +1166,10 @@ function App() {
 
     if (answers.mood && answers.language && answers.genre) {
       const completed = answers as Required<Answers>
-      const selectedSong = pickRecommendedSong(completed as RecommendationAnswers)
+      const selectedSong = pickRecommendedSong(completed as RecommendationAnswers, [], undefined, localPreferenceRef.current)
       setCurrentSong(selectedSong)
       setSeenSongIds([selectedSong.id])
+      registerRecommendation(completed, selectedSong)
       setView('result')
     }
   }
@@ -1014,6 +1186,7 @@ function App() {
   const restart = () => {
     setAnswers({})
     setCurrentSong(null)
+    setRecommendationId('')
     setSeenSongIds([])
     setStep(0)
     setView('quiz')
@@ -1047,7 +1220,12 @@ function App() {
         <VideoBackdrop dimmed={view !== 'hero'} />
         <div className="grain" />
         <Header view={view} onHome={goHome} onPrivacy={() => setPrivacyOpen(true)} />
-        {privacyOpen && <PrivacyModal onClose={() => setPrivacyOpen(false)} />}
+        {privacyOpen && (
+          <PrivacyModal
+            onClose={() => setPrivacyOpen(false)}
+            onClearLocalData={clearAllLocalData}
+          />
+        )}
 
         {view === 'hero' && (
           <Hero visible={heroVisible} onStart={startQuiz} onDescribe={recommendFromDescription} />
@@ -1066,8 +1244,10 @@ function App() {
           <Result
             answers={requiredAnswers}
             song={currentSong}
+            recommendationId={recommendationId}
             onAgain={chooseAnother}
             onRestart={restart}
+            onFeedback={handleLocalFeedback}
             panelRef={panelRef}
           />
         )}
