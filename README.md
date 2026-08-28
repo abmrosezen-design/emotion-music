@@ -16,6 +16,12 @@ pnpm build
 pnpm preview
 ```
 
+更新 B 站播放映射：
+
+```bash
+pnpm catalog:enrich:bilibili
+```
+
 生产构建输出到 `dist/`。项目使用相对资源路径，可部署在独立域名根目录，也可部署在 GitHub Pages 这类仓库子路径。
 
 详细的上线检查、静态托管参数与安全响应头说明见 [`DEPLOYMENT.md`](./DEPLOYMENT.md)。
@@ -32,6 +38,7 @@ pnpm preview
 - “符合 / 不太符合”原因反馈与当前浏览器内的实时偏好学习。
 - 原创情绪寄语和歌曲推荐理由。
 - 网易云音乐、QQ 音乐、酷狗音乐、哔哩哔哩、抖音和 Spotify 搜索跳转。
+- 对已自动匹配 BV 号的歌曲提供 B 站网页内播放，低置信度或失效条目仍使用站外搜索兜底。
 - “此刻想对你说”输入框与本地匿名保存模拟。
 
 ## 曲库结构
@@ -42,9 +49,10 @@ pnpm preview
 - `src/catalog/external-tags.json`：MusicBrainz 批量匹配的原始标签证据、来源与置信度。
 - `src/catalog/verified-tags.ts`：通过高置信度门槛的精简曲风证据，作为推荐算法的低权重补充。
 - `src/catalog/validation.ts`：重复 ID、语言、曲风、情绪、轻音乐纯音乐属性及最低语言曲目数校验。
+- `src/catalog/bilibili-videos.json`：由 B 站公开搜索结果生成的高置信度 BV 号映射。
 
 当前曲库共 273 首，各语言至少 32 首，其中轻音乐池共 52 首且全部标记为无人声。新增歌曲优先选择热门或经典曲目。
 
-本原型不上传用户数据，也不在站内播放完整音乐。
+本原型不上传用户反馈数据。B 站播放器只会在用户主动点击后加载，视频与音频由哔哩哔哩提供。
 
 运行 `npm run catalog:enrich:musicbrainz` 可重新核对外部标签。外部标签不会直接覆盖人工标签；只有歌曲与艺人精确匹配且置信度达到 0.8 的曲风证据才会进入推荐，权重低于人工标签。

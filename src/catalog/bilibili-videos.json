@@ -1,0 +1,406 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-28T07:39:50.152Z",
+  "source": "Bilibili public video search",
+  "minimumConfidence": 0.72,
+  "totalSongs": 273,
+  "matchedSongs": 44,
+  "videos": {
+    "spring-summer-autumn-winter": {
+      "bvid": "BV1GT411h76H",
+      "title": "在百万豪装录音棚大声听 张国荣 《 春夏秋冬 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av485590880"
+    },
+    "yellow": {
+      "bvid": "BV15h411K7dm",
+      "title": "黑胶试听[4K·高音质] | Yellow - Coldplay - Parachutes",
+      "author": "玩哆啦",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av230051561"
+    },
+    "no-surprises": {
+      "bvid": "BV15Y4y1P78z",
+      "title": "Radiohead - No Surprises 【4K修复】",
+      "author": "swansongw",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av643981419"
+    },
+    "lovely-day": {
+      "bvid": "BV1QE411p7uA",
+      "title": "Bill Withers - Lovely Day (Audio) 音频",
+      "author": "xcp_icsigma",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av94313086"
+    },
+    "la-vie-en-rose": {
+      "bvid": "BV1i64y1N7vW",
+      "title": "法语歌曲 Édith piaf - La vie en rose （法语歌词字幕）",
+      "author": "遇见法语Tina老师",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av581352340"
+    },
+    "sparkle": {
+      "bvid": "BV1gW4966E5i",
+      "title": "歌词详解|罗马音假名标注『火花／ スパークル (movie ver.)』 RADWIMPS",
+      "author": "卷心儿",
+      "confidence": 0.894,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av117167580253540"
+    },
+    "one-summers-day": {
+      "bvid": "BV1ov411y7Qv",
+      "title": "久石让 最好听的版本： 宫崎骏《 One Summers Day /那个夏天》插曲 《千与千寻》 音乐 会现场版",
+      "author": "边旅行边流浪",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av244364497"
+    },
+    "nuvole-bianche": {
+      "bvid": "BV1Cm4y1a7vA",
+      "title": "百万级装备试听 Nuvole Bianche 白云 - Ludovico Einaudi 鲁多维科【Hi-Res】",
+      "author": "JLRS日落fm",
+      "confidence": 0.926,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av700267116"
+    },
+    "hopipolla": {
+      "bvid": "BV1Gx411p7Eq",
+      "title": "Sigur Rós - Hoppípolla official MV",
+      "author": "禾斗月半",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av13003827"
+    },
+    "years-like-song": {
+      "bvid": "BV1xx4y187fF",
+      "title": "“当世事再没完美，可远在 岁月如歌 中找你”｜ 陈奕迅 -《 岁月如歌 》",
+      "author": "小金不睡就不会困_",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av1003239741"
+    },
+    "rice-field": {
+      "bvid": "BV1Qyt6zQEG9",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《 稻香 》- 周杰伦 -‘还记得你说家是唯一的城堡’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114988823878223"
+    },
+    "no-need-to-guess": {
+      "bvid": "BV1KoqVBGExr",
+      "title": "【Hi-Res无损】“孤光可自燃，何须问春寒。”——《 不用去猜 (Original)》 Jony J",
+      "author": "大胖脸听歌",
+      "confidence": 0.926,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av115734906667329"
+    },
+    "aint-no-sunshine": {
+      "bvid": "BV1564y1q7bC",
+      "title": "黑胶【Soul】再也没有了阳光《 Ain ’ t No Sunshine 》 Bill Withers",
+      "author": "声堂奇妙皓",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av759849009"
+    },
+    "ne-me-quitte-pas": {
+      "bvid": "BV1Yg4y1m76D",
+      "title": "法语歌曲 Jacques Brel - Ne me quitte pas （法语歌词字幕）",
+      "author": "遇见法语Tina老师",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av836307564"
+    },
+    "formidable": {
+      "bvid": "BV1uU4y1q7Sn",
+      "title": "Stromae - Formidable (HQ)",
+      "author": "我中意食烧鹅髀",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av686232819"
+    },
+    "la-boheme": {
+      "bvid": "BV1Wf4y197VL",
+      "title": "法国歌曲：法国情歌王子 Charles Aznavour ： La bohème 自由的人儿",
+      "author": "法国歌曲",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av286663062"
+    },
+    "basique": {
+      "bvid": "BV1YW411q7rg",
+      "title": "[ OrelSan ] - Basique [CLIP OFFICIEL]",
+      "author": "Ericenroute",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av18336881"
+    },
+    "plastic-love": {
+      "bvid": "BV11h4y1E7gc",
+      "title": "百万级装备试听 Plastic Love - 竹内 玛莉亚【Hi-Res】",
+      "author": "JLRS日落fm",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av613173854"
+    },
+    "stay-with-me-miki": {
+      "bvid": "BV1wJ4ezQEHQ",
+      "title": "松原みき 《 真夜中のドア / Stay With Me 》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.894,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av115376578890887"
+    },
+    "bling-bang-bang-born": {
+      "bvid": "BV1qC411t7vr",
+      "title": "Creepy Nuts ｢ Bling - Bang-Bang - Born ｣ × TV动画｢物理魔法使马修｣ #BBBB舞",
+      "author": "Creepy_Nuts",
+      "confidence": 0.894,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av1952287775"
+    },
+    "ditto": {
+      "bvid": "BV1LfYrenEPg",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《 Ditto 》- NewJeans -‘𝙈𝙑视听’",
+      "author": "歌威贵_grey",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av112952690672613"
+    },
+    "two-hundred-percent": {
+      "bvid": "BV1HW41187xW",
+      "title": "AKMU 乐童 音乐 家 - 200 % -MV (官方中字版)",
+      "author": "今天的鸡公煲有点辣",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av17455478"
+    },
+    "eres": {
+      "bvid": "BV1EN4y1q7oS",
+      "title": "Eres Café Tacvba ♪",
+      "author": "仲夏广英",
+      "confidence": 0.894,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av878389157"
+    },
+    "volare": {
+      "bvid": "BV1nb421B76k",
+      "title": "【格莱美】【第1届】【年度制作】 Nel Blu Dipinto Di Blu ( Volare ) - Domenico Modugno",
+      "author": "电与琴",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av1804615468"
+    },
+    "catalog-11re4ld": {
+      "bvid": "BV1nw86zuE9T",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《 青花瓷 》- 周杰伦 -‘天青色等烟雨 而我在等你’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114943022142748"
+    },
+    "catalog-1nm2yy2": {
+      "bvid": "BV1BZbSzZEGT",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《 晴天 》- 周杰伦 -‘故事的小黄花’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114912554719208"
+    },
+    "catalog-qbq9tu": {
+      "bvid": "BV17z8R6FEh7",
+      "title": "【4K修复】 江南 - 林俊杰 【Hi-Res无损音质】",
+      "author": "小炳音乐",
+      "confidence": 0.926,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av117162345766234"
+    },
+    "catalog-1fkz1z9": {
+      "bvid": "BV16L41167hp",
+      "title": "『4K无损』 可惜不是你 ~ 梁静茹 ★ 可惜不是你 陪我到最后★",
+      "author": "柒乐诗",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av443755709"
+    },
+    "catalog-8z1dds": {
+      "bvid": "BV1ZM411B7YM",
+      "title": "在百万豪装录音棚大声听 孙燕姿 《 我怀念的 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.926,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av521002155"
+    },
+    "catalog-s2r0ob": {
+      "bvid": "BV1p94y1J7yc",
+      "title": "在百万豪装录音棚大声听 孙燕姿 《 天黑黑 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av366250676"
+    },
+    "catalog-gjprir": {
+      "bvid": "BV1294y1x7KY",
+      "title": "在百万豪装录音棚大声听 光良 《 童话 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av363300227"
+    },
+    "catalog-1piuq3k": {
+      "bvid": "BV1oN4y1r7WV",
+      "title": "在百万豪装录音棚大声听 赵雷 《 成都 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av875134516"
+    },
+    "catalog-hdwzas": {
+      "bvid": "BV1XM4m1y79z",
+      "title": "毛不易 《 像我这样的人 》百万豪装录音棚大声听【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av1306384201"
+    },
+    "catalog-t2cbdc": {
+      "bvid": "BV1QRidYgEn1",
+      "title": "【顶级音质 DSEE HX】 崔健 -《 新长征路上的摇滚 》HIRES无损",
+      "author": "音乐的产后料理房",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av113600727421127"
+    },
+    "catalog-jot1k2": {
+      "bvid": "BV17PPWeAESy",
+      "title": "陈慧娴 《 飘雪 》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114058023930076"
+    },
+    "catalog-1j7rv1y": {
+      "bvid": "BV1HpVSzZEwG",
+      "title": "【Hi-Res无损音质】 王菲 《 容易受伤的女人 》这歌原来这么好听 ！经典歌曲最好听的版本 4K60P",
+      "author": "造梦可汗",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114478612021263"
+    },
+    "catalog-1tjdvww": {
+      "bvid": "BV1nM4y1y77y",
+      "title": "在百万豪装录音棚大声听 杨千嬅 《 少女的祈祷 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av910038966"
+    },
+    "catalog-as06sf": {
+      "bvid": "BV1ZjGy6pE3x",
+      "title": "杨千嬅 《 可惜我是水瓶座 》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av116645674616732"
+    },
+    "catalog-kev2os": {
+      "bvid": "BV1iN4y1J77s",
+      "title": "在百万豪装录音棚大声听 陈奕迅 《 K歌之王 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av879356253"
+    },
+    "catalog-10xce6r": {
+      "bvid": "BV14V4y1Q7Ff",
+      "title": "在百万豪装录音棚大声听 陈奕迅 《 陀飞轮 》【Hi-res】",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.926,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av866816570"
+    },
+    "catalog-1xx3i4y": {
+      "bvid": "BV1ZonCzREKE",
+      "title": "Eagles 《 Hotel California 》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av115291921057949"
+    },
+    "catalog-14lrk6j": {
+      "bvid": "BV1bJVyzsETD",
+      "title": "「1977年的宇宙神专」 Dreams - Fleetwood Mac 佛利伍麦克",
+      "author": "JLRS日落fm",
+      "confidence": 0.894,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av114458647076124"
+    },
+    "catalog-138iu93": {
+      "bvid": "BV1YG4y1h7Kp",
+      "title": "Fleetwood Mac - Go Your Own Way (官方MV)",
+      "author": "彼特霓客Beatnik",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av817019417"
+    },
+    "catalog-12qbi8n": {
+      "bvid": "BV1YJ411N72k",
+      "title": "【 LET IT BE 】 The Beatles",
+      "author": "卡秾艺术",
+      "confidence": 0.968,
+      "exactTitle": true,
+      "artistMatch": true,
+      "pageUrl": "http://www.bilibili.com/video/av67161608"
+    }
+  }
+}

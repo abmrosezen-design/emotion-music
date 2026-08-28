@@ -1,6 +1,6 @@
 /*
   Cache-Control: no-cache
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.cdnfonts.com; img-src 'self' data:; media-src 'self' blob: https://d8j0ntlcm91z4.cloudfront.net; connect-src 'self' https://d8j0ntlcm91z4.cloudfront.net; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; frame-src https://player.bilibili.com; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.cdnfonts.com; img-src 'self' data:; media-src 'self' blob: https://d8j0ntlcm91z4.cloudfront.net; connect-src 'self' https://d8j0ntlcm91z4.cloudfront.net; upgrade-insecure-requests
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff

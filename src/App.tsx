@@ -34,6 +34,8 @@ import {
 } from './recommendation'
 import { analyzeDescription } from './textAnalysis'
 import GlowCursor from './components/GlowCursor'
+import BilibiliPlayer, { type BilibiliVideo } from './components/BilibiliPlayer'
+import bilibiliCatalog from './catalog/bilibili-videos.json'
 import {
   clearLocalPreferenceProfile,
   createDefaultPreferenceProfile,
@@ -444,7 +446,8 @@ function PrivacyModal({
           <p><span className="mr-2 text-white">02</span>“符合”“不太符合”、换歌与站外搜索反馈只保存在当前浏览器，用于即时调整之后的推荐。</p>
           <p><span className="mr-2 text-white">03</span>“此刻想对你说”的内容只有在你主动勾选同意并提交后，才会保存在当前浏览器。</p>
           <p><span className="mr-2 text-white">04</span>原型阶段不会将上述数据上传服务器；你可以随时使用下方按钮清除全部本地记录。</p>
-          <p><span className="mr-2 text-white">05</span>前往网易云音乐、QQ 音乐、酷狗音乐、哔哩哔哩、抖音或 Spotify 后，将适用对应平台的隐私规则。</p>
+          <p><span className="mr-2 text-white">05</span>B 站播放器只会在你主动点击“在本页播放”后加载；届时浏览器会连接哔哩哔哩，并适用其隐私规则。</p>
+          <p><span className="mr-2 text-white">06</span>前往网易云音乐、QQ 音乐、酷狗音乐、哔哩哔哩、抖音或 Spotify 后，将适用对应平台的隐私规则。</p>
         </div>
 
         <button
@@ -745,14 +748,17 @@ function Result({
   const [selectedReasons, setSelectedReasons] = useState<FeedbackReason[]>([])
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [platformRecorded, setPlatformRecorded] = useState(false)
+  const [bilibiliOpen, setBilibiliOpen] = useState(false)
   const copy = moodCopy[answers.mood]
   const query = `${song.title} ${song.artist}`
+  const bilibiliVideo = (bilibiliCatalog.videos as Record<string, BilibiliVideo | undefined>)[song.id]
 
   useEffect(() => {
     setFeedback(null)
     setSelectedReasons([])
     setFeedbackSubmitted(false)
     setPlatformRecorded(false)
+    setBilibiliOpen(false)
   }, [song.id, recommendationId])
 
   const platforms = [
@@ -774,7 +780,7 @@ function Result({
     {
       name: '哔哩哔哩',
       short: 'BILIBILI',
-      url: `https://search.bilibili.com/all?keyword=${encodeURIComponent(query)}`,
+      url: bilibiliVideo?.pageUrl ?? `https://search.bilibili.com/all?keyword=${encodeURIComponent(query)}`,
     },
     {
       name: '抖音',
@@ -899,6 +905,28 @@ function Result({
                 </p>
               </div>
             </div>
+
+            {bilibiliVideo && (
+              <div className="mt-7 border-t border-white/10 pt-6">
+                <div className="mb-3 flex items-center justify-between gap-4">
+                  <p className="font-body text-[10px] font-medium tracking-[0.18em] text-white/40">网页内播放</p>
+                  <p className="font-body text-[9px] text-white/28">点击后加载 B 站播放器</p>
+                </div>
+                <BilibiliPlayer
+                  songTitle={`${song.title} · ${song.artist}`}
+                  video={bilibiliVideo}
+                  active={bilibiliOpen}
+                  onOpen={() => {
+                    setBilibiliOpen(true)
+                    if (!platformRecorded) {
+                      setPlatformRecorded(true)
+                      onFeedback('platform_click')
+                    }
+                  }}
+                  onClose={() => setBilibiliOpen(false)}
+                />
+              </div>
+            )}
 
             <div className="mt-7 border-t border-white/10 pt-6">
               <div className="mb-3 flex items-center justify-between">
