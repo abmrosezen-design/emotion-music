@@ -24,6 +24,16 @@ const concreteGenres: Exclude<GenreId, 'random'>[] = [
 
 const moods: MoodId[] = ['happy', 'calm', 'low', 'lonely', 'anxious', 'tired', 'angry', 'unclear']
 
+// 情绪标签描述歌曲主要适配的状态，而不是歌曲可能引发的所有感受。
+// 同一首歌最多保留两个相近或可共存的标签，避免推荐边界变得模糊。
+const conflictingMoodPairs: ReadonlyArray<readonly [MoodId, MoodId]> = [
+  ['happy', 'low'],
+  ['happy', 'lonely'],
+  ['happy', 'angry'],
+  ['calm', 'anxious'],
+  ['calm', 'angry'],
+]
+
 export interface CatalogStats {
   total: number
   byLanguage: Record<string, number>
@@ -60,8 +70,26 @@ export function validateCatalog(catalog: Song[], minimumPerLanguage = 32) {
     if (song.genres.length === 0 || song.genres.some((genre) => !concreteGenres.includes(genre))) {
       throw new Error(`Invalid genre list for ${song.id}`)
     }
+    if (song.genres.includes('light') && !song.instrumental) {
+      throw new Error(`Light music must be instrumental: ${song.id}`)
+    }
+    if (song.instrumental && !song.genres.includes('light')) {
+      throw new Error(`Instrumental song must be in the light music catalog: ${song.id}`)
+    }
     if (song.moods.length === 0 || song.moods.some((mood) => !moods.includes(mood))) {
       throw new Error(`Invalid mood list for ${song.id}`)
+    }
+    if (song.moods.length > 2) {
+      throw new Error(`Song ${song.id} has more than two moods`)
+    }
+    if (new Set(song.moods).size !== song.moods.length) {
+      throw new Error(`Song ${song.id} has duplicate moods`)
+    }
+    const conflictingPair = conflictingMoodPairs.find(([first, second]) =>
+      song.moods.includes(first) && song.moods.includes(second),
+    )
+    if (conflictingPair) {
+      throw new Error(`Song ${song.id} has conflicting moods: ${conflictingPair.join(' + ')}`)
     }
   })
 

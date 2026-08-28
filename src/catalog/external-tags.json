@@ -1,0 +1,3903 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-27T15:27:04.187Z",
+  "source": "MusicBrainz public API",
+  "totalSongs": 273,
+  "summary": {
+    "matched": 35,
+    "withGenreEvidence": 23,
+    "withMoodEvidence": 0,
+    "lowConfidence": 48,
+    "unavailable": 20
+  },
+  "songs": {
+    "sunset-infinite": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "fe85f6f7-5c50-485b-b8b6-ec9272aa1889",
+      "matchedTitle": "夕阳无限好",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "spring-summer-autumn-winter": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "b0d54f22-3da7-46a9-88bd-dfee511449dc",
+      "matchedTitle": "春夏秋冬",
+      "matchedArtist": "張國榮",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "boundless-oceans": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "90b63e6d-27de-4735-9d0f-97d117a36285",
+      "matchedTitle": "海阔天空",
+      "matchedArtist": "Beyond",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "tenderness": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "29343161-ba97-485a-b383-e5ff5e4a1a2d",
+      "matchedTitle": "溫柔",
+      "matchedArtist": "五月天",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "the-ordinary-road": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c094ae6b-7cf9-44be-a005-93f90d3e8add",
+      "matchedTitle": "平凡之路",
+      "matchedArtist": "朴树",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "encounter": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5664aefa-cf32-4b18-a50b-b9c8ef2025e4",
+      "matchedTitle": "遇见",
+      "matchedArtist": "孙燕姿",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "the-name-engraved": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "d2c27f2f-b3ef-49ce-af89-762c4ee26100",
+      "matchedTitle": "刻在我心底的名字 (電影《刻在你心底的名字》主題曲)",
+      "matchedArtist": "盧廣仲",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "yellow": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "60653512-157a-47c5-9ac8-50eb82185243",
+      "matchedTitle": "Yellow",
+      "matchedArtist": "Coldplay",
+      "matchScore": 100,
+      "confidence": 0.5,
+      "externalTags": [
+        {
+          "name": "rock",
+          "count": 1
+        },
+        {
+          "name": "alternative rock",
+          "count": 1
+        },
+        {
+          "name": "britpop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "rock",
+          "score": 2
+        }
+      ],
+      "mappedMoods": []
+    },
+    "no-surprises": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "13bf8f0c-d871-4a41-96aa-2ebc74a9c95d",
+      "matchedTitle": "No Surprises",
+      "matchedArtist": "Radiohead",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "lovely-day": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "99b2e7a9-792d-4ef3-ab34-9af87f5181c9",
+      "matchedTitle": "Lovely Day",
+      "matchedArtist": "Bill Withers",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "dont-know-why": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0f51bf67-e2b4-4026-b62a-b2d9b02002df",
+      "matchedTitle": "Don't Know Why",
+      "matchedArtist": "Norah Jones",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "la-vie-en-rose": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d9724c21-ed22-459e-8804-9f23c64b8046",
+      "matchedTitle": "La Vie en rose",
+      "matchedArtist": "Édith Piaf",
+      "matchScore": 96,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "je-te-laisserai-des-mots": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "6614c059-4eec-4a49-8eaf-7c3fe8a42ce2",
+      "matchedTitle": "Je te laisserai des mots",
+      "matchedArtist": "Patrick Watson",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "français",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "derniere-danse": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b1a2f40c-e405-4b5d-b572-16013acac8d7",
+      "matchedTitle": "Dernière Danse",
+      "matchedArtist": "Indila",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "alors-on-danse": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "9995c2f0-5ec9-4e1f-aa1d-085448936f9f",
+      "matchedTitle": "Alors on danse",
+      "matchedArtist": "Stromae",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "first-love": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "sparkle": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "efcc9dc0-c429-4208-941a-45e18710ace9",
+      "matchedTitle": "スパークル [Encore]",
+      "matchedArtist": "RADWIMPS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "one-summers-day": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "through-the-night": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "2b9b4c96-1ca4-412b-822a-19cdb01b81a7",
+      "matchedTitle": "夜信 (Through the Night) 中文字幕音樂錄影帶",
+      "matchedArtist": "IU",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "spring-day": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "aec719f1-1e34-4f74-96bd-58e0a7508cb2",
+      "matchedTitle": "Spring Day -Japanese ver.-",
+      "matchedArtist": "BTS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "you-were-beautiful": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "498f1466-6ad4-4472-bcd4-0183b0a5d9d1",
+      "matchedTitle": "You Were Beautiful (English ver.)",
+      "matchedArtist": "DAY6",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "nuvole-bianche": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "8778b33d-f215-4949-b66f-8a2cc0d79171",
+      "matchedTitle": "Nuvole bianche",
+      "matchedArtist": "Ludovico Einaudi",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "hopipolla": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f6f6859a-6dd6-4ed1-bf71-7257d2129021",
+      "matchedTitle": "Hoppípolla",
+      "matchedArtist": "Sigur Rós",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "weightless": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "36cb35d2-3780-414a-9ef9-fec1e56e2eed",
+      "matchedTitle": "Weightless",
+      "matchedArtist": "Marconi Union",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "fuji-mountain": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "5cccf8c2-540a-4e13-abf3-0458a890372b",
+      "matchedTitle": "富士山下",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0.092,
+      "externalTags": [
+        {
+          "name": "cantopop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "wedding-card-street": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "years-like-song": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "7cf24ddd-2f5b-4410-8437-16a8d64e21bc",
+      "matchedTitle": "歲月如歌",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "glorious-years": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "01f500ed-5274-4d0e-b65f-594244a93d04",
+      "matchedTitle": "光辉岁月",
+      "matchedArtist": "Beyond",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "everywhere-kiss": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "8924561b-042e-4391-93f5-436d82966d3c",
+      "matchedTitle": "處處吻",
+      "matchedArtist": "楊千嬅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "rice-field": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "2896234a-1bec-4898-aff5-e2f1d4449a6c",
+      "matchedTitle": "稻香",
+      "matchedArtist": "周杰倫",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "simple-love": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "4b3365a1-5d23-478b-b78b-20641eb0ac0f",
+      "matchedTitle": "爱很简单",
+      "matchedArtist": "陶喆",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "brightest-star-night": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b5fe7de7-5013-4574-8a9f-b49deceadd32",
+      "matchedTitle": "夜空中最亮的星",
+      "matchedArtist": "逃跑计划",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "no-need-to-guess": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "e4a2f93d-4378-444e-83cf-a55e61dc69f0",
+      "matchedTitle": "不用去猜",
+      "matchedArtist": "Jony J",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "fix-you": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d4d9bea9-ad07-4e21-b381-b8a1f92791f3",
+      "matchedTitle": "Fix You",
+      "matchedArtist": "Coldplay",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "fast-car": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "47f7e706-2135-417c-8804-4cf50deef913",
+      "matchedTitle": "Fast Car",
+      "matchedArtist": "Tracy Chapman",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "aint-no-sunshine": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c8ba580b-3469-4752-bf6b-4c595f1db26f",
+      "matchedTitle": "Ain’t No Sunshine",
+      "matchedArtist": "Bill Withers",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "lose-yourself": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c56f3c12-d3dc-46e8-b650-b5fdec97aefe",
+      "matchedTitle": "Lose Yourself",
+      "matchedArtist": "Eminem",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "ne-me-quitte-pas": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "8ca5f0f1-0114-425b-b7cf-d6ab9b42b126",
+      "matchedTitle": "Ne me quitte pas",
+      "matchedArtist": "Jacques Brel",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "formidable": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5737d58b-3faa-4855-8ae1-5b3cd782bb02",
+      "matchedTitle": "Formidable",
+      "matchedArtist": "Stromae",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "la-boheme": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "06afa339-7f5f-4ca3-b6e9-89c258a36efd",
+      "matchedTitle": "La Bohème",
+      "matchedArtist": "Charles Aznavour",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "basique": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "1291cf5a-0d0f-45b7-a82f-c3cc895cb16e",
+      "matchedTitle": "Basique",
+      "matchedArtist": "Orelsan",
+      "matchScore": 100,
+      "confidence": 0.833,
+      "externalTags": [
+        {
+          "name": "conscious",
+          "count": 1
+        },
+        {
+          "name": "repetitive",
+          "count": 1
+        },
+        {
+          "name": "male vocalist",
+          "count": 1
+        },
+        {
+          "name": "sarcastic",
+          "count": 1
+        },
+        {
+          "name": "french hip hop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "lemon": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b9b9da11-0301-4005-8413-9f1f34e17033",
+      "matchedTitle": "Lemon",
+      "matchedArtist": "米津玄師",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "plastic-love": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "55b974c1-e5c2-44f3-b401-0e0601a36118",
+      "matchedTitle": "Plastic Love",
+      "matchedArtist": "竹内まりや",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "stay-with-me-miki": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f7510d7d-ca43-4854-b1cc-850c32d480c6",
+      "matchedTitle": "真夜中のドア～stay with me",
+      "matchedArtist": "松原みき",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "nandemonaiya": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b5fcef52-f0e2-4ed5-be14-8e3509b01c67",
+      "matchedTitle": "なんでもないや",
+      "matchedArtist": "RADWIMPS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "bling-bang-bang-born": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "7207b085-a476-4caf-a37a-9233cf3c31f1",
+      "matchedTitle": "Bling‐Bang‐Bang‐Born",
+      "matchedArtist": "Creepy Nuts",
+      "matchScore": 100,
+      "confidence": 0.333,
+      "externalTags": [
+        {
+          "name": "party",
+          "count": 1
+        },
+        {
+          "name": "hip-hop/rap",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "ditto": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "adf44a12-e5f4-48aa-9029-b9ef4b5f1d6d",
+      "matchedTitle": "Ditto",
+      "matchedArtist": "NewJeans",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "love-wins-all": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5a30eb21-d05b-436b-8e39-e1322ed9cbd6",
+      "matchedTitle": "Love wins all",
+      "matchedArtist": "IU",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "two-hundred-percent": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "3acd7c34-f21d-44ef-95b2-80a8ade0e81c",
+      "matchedTitle": "200%",
+      "matchedArtist": "AKMU",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instagram-dean": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6fed8426-c2e1-4a6b-8bb5-93d4fe8b4beb",
+      "matchedTitle": "Instagram",
+      "matchedArtist": "DEAN",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "any-song-zico": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4d28e325-faab-4ff7-b281-e0dcac450c1a",
+      "matchedTitle": "Any Song",
+      "matchedArtist": "ZICO",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "k-pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "eres": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "352f8803-873e-4fe8-a524-e62ccdbd70fd",
+      "matchedTitle": "Eres",
+      "matchedArtist": "Café Tacvba",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "gracias-a-la-vida": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "7e9f4559-99d4-4b97-8018-ebe962a35e38",
+      "matchedTitle": "Gracias a la vida",
+      "matchedArtist": "Mercedes Sosa",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "volare": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "7b20ebd9-3c40-45cd-a22e-c5dea8f1b32d",
+      "matchedTitle": "Nel blu dipinto di blu (Volare)",
+      "matchedArtist": "Domenico Modugno",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "ninety-nine-luftballons": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "e791c24e-ee0e-41ff-a569-456c59bfd466",
+      "matchedTitle": "99 Luftballons",
+      "matchedArtist": "Nena",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "aguas-de-marco": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "60e025ab-2540-41e3-ad0d-da666368fff3",
+      "matchedTitle": "Águas de março",
+      "matchedArtist": "Elis Regina & Antônio Carlos Jobim",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1pscns1": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "df46e40b-548b-4633-a6b9-0e1d6cdb9823",
+      "matchedTitle": "月亮代表我的心",
+      "matchedArtist": "鄧麗君",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-k9s8i8": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "07a7ca35-7c00-45a8-9a92-8b061038933e",
+      "matchedTitle": "甜蜜蜜",
+      "matchedArtist": "鄧麗君",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-h5u9o0": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "57d4ca9a-ec0b-42ec-a404-e052475c0de5",
+      "matchedTitle": "红豆",
+      "matchedArtist": "王菲",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1axke4d": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "718dae20-e076-478b-bf5c-e9ed8cea9481",
+      "matchedTitle": "匆匆那年",
+      "matchedArtist": "王菲",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-11re4ld": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "4ce2833c-ef67-400c-96c5-bf71d3252fb2",
+      "matchedTitle": "青花瓷",
+      "matchedArtist": "周杰倫",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1nm2yy2": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "729c6839-a400-41aa-aeb1-dfe657dc8be2",
+      "matchedTitle": "晴天",
+      "matchedArtist": "周杰倫",
+      "matchScore": 100,
+      "confidence": 0.367,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 3
+        },
+        {
+          "name": "r b",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 3
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-nik13t": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "11e5f727-8904-4bb8-b242-863043a0fe4f",
+      "matchedTitle": "七里香",
+      "matchedArtist": "周杰倫",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-qbq9tu": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "16f16e65-8d01-472f-9974-44b3d91d0850",
+      "matchedTitle": "江南",
+      "matchedArtist": "林俊傑",
+      "matchScore": 100,
+      "confidence": 0.367,
+      "externalTags": [
+        {
+          "name": "chinese",
+          "count": 1
+        },
+        {
+          "name": "c-pop",
+          "count": 1
+        },
+        {
+          "name": "mandopop",
+          "count": 1
+        },
+        {
+          "name": "zhongguo feng",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-87o1i0": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "44bc226c-a018-4d1f-88d7-c8eff0bec18e",
+      "matchedTitle": "修炼爱情",
+      "matchedArtist": "林俊傑",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1b0zezp": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "dbc5806a-3cf5-45da-b8aa-0a40cdd7a881",
+      "matchedTitle": "勇气",
+      "matchedArtist": "梁靜茹",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1fkz1z9": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "a593990b-180a-4400-a36c-907314f1b750",
+      "matchedTitle": "可惜不是你",
+      "matchedArtist": "梁靜茹",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1lte6qk": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "67c2cb62-2255-4a8a-9bd5-129e4035d9bd",
+      "matchedTitle": "后来",
+      "matchedArtist": "劉若英",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-8z1dds": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "68502d62-d57c-4f6f-bd46-e1bd25070611",
+      "matchedTitle": "我怀念的",
+      "matchedArtist": "孙燕姿",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-s2r0ob": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b18a5ca2-d13b-464b-9476-728a38f87b0c",
+      "matchedTitle": "天黑黑",
+      "matchedArtist": "孙燕姿",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-gjprir": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "112e033c-c138-42c0-9db6-6fd838e9e4ad",
+      "matchedTitle": "童话",
+      "matchedArtist": "光良",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-a5tio1": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "3d1cb212-d7ee-4347-8215-c405a9ef8b48",
+      "matchedTitle": "小幸運",
+      "matchedArtist": "田馥甄",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-8jitrr": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "ea7b7b65-17d5-4c4a-9c0f-6c2a53b79161",
+      "matchedTitle": "追光者",
+      "matchedArtist": "岑寧兒",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1i0p4c8": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "e7907fd4-0258-4eac-896b-0c0dbeb45aea",
+      "matchedTitle": "南山南",
+      "matchedArtist": "马頔",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1piuq3k": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "27d7907a-6b9f-4b46-b59f-e7b74fe2dc93",
+      "matchedTitle": "成都",
+      "matchedArtist": "赵雷",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-hdwzas": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "8a123bd7-2bca-48c0-bfd9-7f98ccc9133a",
+      "matchedTitle": "像我这样的人",
+      "matchedArtist": "毛不易",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1baxbqa": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-t2cbdc": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "a5b5ad77-b4a7-46ad-929d-b2db54b9401a",
+      "matchedTitle": "新长征路上的摇滚",
+      "matchedArtist": "崔健",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1gwwypj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "9c590e97-c517-4ccb-b1df-037365b5cd72",
+      "matchedTitle": "一无所有",
+      "matchedArtist": "崔健",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-lm95p2": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1aamd63": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ef51226a-2783-40ed-81b7-6a03ad02d9a7",
+      "matchedTitle": "红日",
+      "matchedArtist": "李克勤",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-qaytn6": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "69c29b19-35a2-4d9f-ac99-95541f180984",
+      "matchedTitle": "一生不变",
+      "matchedArtist": "李克勤",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1b2in2p": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "8444e1ea-f41d-460c-b378-ff1fe4769c8c",
+      "matchedTitle": "月半小夜曲",
+      "matchedArtist": "李克勤",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1eq3c5r": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "16e20957-d191-4670-93dd-3f1a7c2ecb24",
+      "matchedTitle": "千千闋歌",
+      "matchedArtist": "陳慧嫻",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-jot1k2": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "75329f87-ae76-406a-90b9-5d89901cd82b",
+      "matchedTitle": "飘雪",
+      "matchedArtist": "陳慧嫻",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1j7rv1y": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "27721ac3-406d-4be5-8f03-8d732baedb3d",
+      "matchedTitle": "容易受傷的女人",
+      "matchedArtist": "王菲",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1u28hkw": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "1641714a-173e-4a33-a17a-6f6c6a7a308b",
+      "matchedTitle": "约定",
+      "matchedArtist": "王菲",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1tjdvww": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "e8622203-04bf-4257-bb3c-8f83f64bd658",
+      "matchedTitle": "少女的祈祷",
+      "matchedArtist": "楊千嬅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-as06sf": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "96f2183e-97bf-4de5-b974-f67e010dfd91",
+      "matchedTitle": "可惜我是水瓶座",
+      "matchedArtist": "楊千嬅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1806cv0": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "5af36fe2-9a77-4b53-a7e8-f5c5c003e6c7",
+      "matchedTitle": "再见二丁目",
+      "matchedArtist": "楊千嬅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-kev2os": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "26d45190-8ebe-4420-9424-fa65789cf47b",
+      "matchedTitle": "K歌之王",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1d5grva": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "1b0351f1-4c0d-4f0d-bd7f-61760a290146",
+      "matchedTitle": "最佳損友",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-10xce6r": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "c32c81ce-f4e0-45f5-82d5-e081eee9e445",
+      "matchedTitle": "陀飛輪",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-didyi1": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "6ffd05e4-3188-4924-9a80-ee8addb7b160",
+      "matchedTitle": "葡萄成熟時",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-s3rptz": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "a31384c8-30c4-4851-aecb-582fa6507c8e",
+      "matchedTitle": "浮夸",
+      "matchedArtist": "陳奕迅",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1nem592": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "d5a3d13c-bb34-4b4c-8fc3-84f2f49e2546",
+      "matchedTitle": "一生所爱",
+      "matchedArtist": "盧冠廷",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-pfnmwh": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "1e7654ff-78c7-4055-9224-1b7b057d0029",
+      "matchedTitle": "似是故人来",
+      "matchedArtist": "梅艷芳",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-qgxoot": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "8fd8ac0a-9ef6-4901-aefa-a4e1428036cf",
+      "matchedTitle": "夕阳之歌",
+      "matchedArtist": "梅艷芳",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-3cpu3o": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-rmijlm": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "d59ff7e0-31a5-4215-a706-317e3e3cda66",
+      "matchedTitle": "风继续吹",
+      "matchedArtist": "張國榮",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-32egg": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "25cf969e-d409-4c52-b066-40c62dc20cd6",
+      "matchedTitle": "谁伴我闯荡",
+      "matchedArtist": "Beyond",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-coftb2": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "85a4e769-0f51-456b-b1ea-7f0633ccceec",
+      "matchedTitle": "喜欢你",
+      "matchedArtist": "Beyond",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1cwydf": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "3c3e18cd-da44-4c9e-a2d0-708dd1117f5c",
+      "matchedTitle": "冷雨夜",
+      "matchedArtist": "Beyond",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-xg7kxv": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "70fc7ab7-a4ec-48c7-a124-459fabe4381c",
+      "matchedTitle": "大懶堂",
+      "matchedArtist": "LMF",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-wgkmx4": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "46fe768c-7b38-4147-9f02-815b9f0759e2",
+      "matchedTitle": "Bohemian Rhapsody",
+      "matchedArtist": "Queen",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-sol26d": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "d4b5f35a-1003-4dad-b247-b9f591bdbaef",
+      "matchedTitle": "Don’t Stop Me Now",
+      "matchedArtist": "Queen",
+      "matchScore": 100,
+      "confidence": 0.667,
+      "externalTags": [
+        {
+          "name": "rock",
+          "count": 2
+        },
+        {
+          "name": "hard rock",
+          "count": 1
+        },
+        {
+          "name": "classic rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "rock",
+          "score": 3
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1xx3i4y": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c2b08c86-f3b8-4222-87d7-f9de6509b391",
+      "matchedTitle": "Hotel California",
+      "matchedArtist": "Eagles",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-14lrk6j": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c0adf53e-1264-4605-b1dd-641141c64091",
+      "matchedTitle": "Dreams",
+      "matchedArtist": "Fleetwood Mac",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-138iu93": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5893848e-a49d-4f56-b102-5df1b9cdd5d0",
+      "matchedTitle": "Go Your Own Way",
+      "matchedArtist": "Fleetwood Mac",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-r6c03a": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "27f1f9be-6d50-4ad6-8bca-026c662dcc7a",
+      "matchedTitle": "Imagine",
+      "matchedArtist": "John Lennon",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-12qbi8n": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0579949e-d7e2-45e5-84c8-9ef92d54cd69",
+      "matchedTitle": "Let It Be",
+      "matchedArtist": "The Beatles",
+      "matchScore": 99,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-10ckyyw": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b20e6e66-c587-4fa2-8d2b-c2167c6b6b5f",
+      "matchedTitle": "Here Comes The Sun",
+      "matchedArtist": "The Beatles",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-53r7f4": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "695036bc-60fb-4e66-841e-7d566f5787fa",
+      "matchedTitle": "Billie Jean",
+      "matchedArtist": "Michael Jackson",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-x5r6h4": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "e785f7f5-4bf9-4534-8407-8ef299bf20b1",
+      "matchedTitle": "Man in the Mirror",
+      "matchedArtist": "Michael Jackson",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1w6fsfr": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-106jm5e": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "49ec2f7a-14f5-4d4e-9b0e-47ae2ebfc3e1",
+      "matchedTitle": "Someone Like You",
+      "matchedArtist": "Adele",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1felilg": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-m2k5dt": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "1e39f660-b464-4743-b775-f9cbbb95e2b7",
+      "matchedTitle": "Save Your Tears",
+      "matchedArtist": "The Weeknd",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1rhvs9z": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c664a576-f0e5-4725-8d52-05ecfe4822d8",
+      "matchedTitle": "Shape of You",
+      "matchedArtist": "Ed Sheeran",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-nad5eh": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "92547ce7-08c1-48f1-a1c6-a4fe7c5f215e",
+      "matchedTitle": "Perfect",
+      "matchedArtist": "Ed Sheeran",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-8hgxzs": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "775bd63d-a8ec-4ac5-b6ac-56fa105eac62",
+      "matchedTitle": "Smells Like Teen Spirit",
+      "matchedArtist": "Nirvana",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-3dfytb": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4bc78586-56ba-4473-bf35-87c1d79eff35",
+      "matchedTitle": "Creep",
+      "matchedArtist": "Radiohead",
+      "matchScore": 100,
+      "confidence": 0.667,
+      "externalTags": [
+        {
+          "name": "rock",
+          "count": 2
+        },
+        {
+          "name": "alternative rock",
+          "count": 2
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "rock",
+          "score": 4
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1jec807": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "1e99ed05-b6ca-4a33-b936-240987929f45",
+      "matchedTitle": "Take Me Home, Country Roads",
+      "matchedArtist": "John Denver",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-n4rucf": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0d2824b0-c85c-4398-a1c5-f64782a133a9",
+      "matchedTitle": "Hallelujah",
+      "matchedArtist": "Leonard Cohen",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1azrfwa": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "2e52e5d4-30bb-4327-b168-c97eaaba8673",
+      "matchedTitle": "Numb",
+      "matchedArtist": "Linkin Park",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1x88mws": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b65e82b5-e28c-4aea-a445-d97d3ccadab3",
+      "matchedTitle": "Stan",
+      "matchedArtist": "Eminem",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1ygzkue": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "72f2f572-ce80-427e-9996-b79e7a2c38f5",
+      "matchedTitle": "Juicy",
+      "matchedArtist": "The Notorious B.I.G.",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-bbwpjd": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "cb5cf13a-0bf0-4e03-b826-3eb243c6a929",
+      "matchedTitle": "Lean on Me",
+      "matchedArtist": "Bill Withers",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ryryaw": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "9791216b-e575-4409-ac33-8641e3ec9c79",
+      "matchedTitle": "La Mer",
+      "matchedArtist": "Charles Trenet",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1nlpjsa": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0aedf344-41c0-4648-9953-b0ad3d79d9a4",
+      "matchedTitle": "Les Champs-Élysées",
+      "matchedArtist": "Joe Dassin",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-coex0c": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "a7a74aec-f9c3-4dfd-9e8d-b51ce541146b",
+      "matchedTitle": "Non, je ne regrette rien",
+      "matchedArtist": "Édith Piaf",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1rj424j": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6b0aa629-58cb-4cd1-99a9-992d5234cb16",
+      "matchedTitle": "Padam… padam",
+      "matchedArtist": "Édith Piaf",
+      "matchScore": 90,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1umb8en": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d16062c2-506a-4c9d-af67-47217c8b1d39",
+      "matchedTitle": "Tous les garçons et les filles",
+      "matchedArtist": "Françoise Hardy",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1756rr5": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "20432506-ac1a-4825-946c-fcdc35a0f2c8",
+      "matchedTitle": "Comment te dire adieu",
+      "matchedArtist": "Françoise Hardy",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1stbl2p": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "85db14f1-95d9-4ccb-86f2-ac9664e17e0a",
+      "matchedTitle": "Joe le taxi",
+      "matchedArtist": "Vanessa Paradis",
+      "matchScore": 100,
+      "confidence": 0.833,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 2
+        },
+        {
+          "name": "rock",
+          "count": 1
+        },
+        {
+          "name": "ballad",
+          "count": 1
+        },
+        {
+          "name": "pop rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 2
+        },
+        {
+          "id": "rock",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1k2njmj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ca5d1996-05f0-4128-a3a5-118f49ad1c5d",
+      "matchedTitle": "Moi Lolita",
+      "matchedArtist": "Alizée",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-kmddtb": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "dfd2793e-62a1-4092-8ee1-639c228f6c6c",
+      "matchedTitle": "Je veux",
+      "matchedArtist": "Zaz",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "chanson",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-beazb5": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-wj5s4p": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "3ed7d71e-5c71-49da-bdba-ffb33918d0c1",
+      "matchedTitle": "Tous les mêmes",
+      "matchedArtist": "Stromae",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "electropop",
+          "count": 2
+        },
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "dance-pop",
+          "count": 1
+        },
+        {
+          "name": "french pop",
+          "count": 1
+        },
+        {
+          "name": "electro house",
+          "count": 1
+        },
+        {
+          "name": "electro swing",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 2
+        },
+        {
+          "id": "electronic",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-rhpkby": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "8e9097f3-d59d-485d-9106-83bae028daba",
+      "matchedTitle": "Papaoutai",
+      "matchedArtist": "Stromae",
+      "matchScore": 100,
+      "confidence": 0.333,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "party",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-160rdqd": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "79528841-2b72-4bae-b096-7b4e3000e4e0",
+      "matchedTitle": "Balance ton quoi",
+      "matchedArtist": "Angèle",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1xidulx": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "19d9ee7a-162f-4d33-87c1-f0041168a835",
+      "matchedTitle": "Tout oublier",
+      "matchedArtist": "Angèle & Roméo Elvis",
+      "matchScore": 100,
+      "confidence": 0.147,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1trwsxc": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "46f74011-1f57-4a07-a159-ecee80555b85",
+      "matchedTitle": "Tourner dans le vide",
+      "matchedArtist": "Indila",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 6
+        },
+        {
+          "name": "vocal",
+          "count": 2
+        },
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "dance",
+          "count": 1
+        },
+        {
+          "name": "electropop",
+          "count": 1
+        },
+        {
+          "name": "french pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 6
+        },
+        {
+          "id": "electronic",
+          "score": 2
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-vj0x1i": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "68dfb551-6462-4f77-a2cb-71271f4733d2",
+      "matchedTitle": "La Grenade",
+      "matchedArtist": "Clara Luciani",
+      "matchScore": 100,
+      "confidence": 0.5,
+      "externalTags": [
+        {
+          "name": "synth-pop",
+          "count": 1
+        },
+        {
+          "name": "french pop",
+          "count": 1
+        },
+        {
+          "name": "nu disco",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-7957xj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "bcb8744b-6661-422c-a0d0-93b3c4f6bf9a",
+      "matchedTitle": "Respire encore",
+      "matchedArtist": "Clara Luciani",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-rpnyk5": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "abe9d55b-7d19-4e12-9ec5-1cb5859187d1",
+      "matchedTitle": "Quelqu’un m’a dit",
+      "matchedArtist": "Carla Bruni",
+      "matchScore": 100,
+      "confidence": 0.5,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "chanson française",
+          "count": 1
+        },
+        {
+          "name": "traditional",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1nbbmat": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "31482644-392f-458f-abe9-55dc464d7c83",
+      "matchedTitle": "Je te promets",
+      "matchedArtist": "Johnny Hallyday",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-13ep9re": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "291f8a78-3472-41fe-9d06-0c7923244c3a",
+      "matchedTitle": "J’t’emmène au vent",
+      "matchedArtist": "Louise Attaque",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1ygdpi": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "117d62fa-03cb-4147-b31b-c02c69529a85",
+      "matchedTitle": "L'Aventurier",
+      "matchedArtist": "Indochine",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "rock",
+          "count": 3
+        },
+        {
+          "name": "alternative rock",
+          "count": 2
+        },
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "new wave",
+          "count": 1
+        },
+        {
+          "name": "synth-pop",
+          "count": 1
+        },
+        {
+          "name": "pop rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "rock",
+          "score": 5
+        },
+        {
+          "id": "electronic",
+          "score": 1
+        },
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-17xe76p": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "ce6ba26f-9e13-4976-b1bd-4ef423df9e5e",
+      "matchedTitle": "Cendrillon",
+      "matchedArtist": "Téléphone",
+      "matchScore": 100,
+      "confidence": 0.5,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 2
+        },
+        {
+          "name": "new wave",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 2
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1ox62ai": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "001eb632-3f19-4eb5-8275-2962f93c685a",
+      "matchedTitle": "Djadja",
+      "matchedArtist": "Aya Nakamura",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-16bct4r": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "e56650d6-e7c2-4b77-bb2d-734802f4b084",
+      "matchedTitle": "La Même",
+      "matchedArtist": "GIMS & Vianney",
+      "matchScore": 100,
+      "confidence": 0.147,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-sbt7pq": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "9f9a8e86-d798-4bfe-8aaf-1607fb88242c",
+      "matchedTitle": "上を向いて歩こう",
+      "matchedArtist": "坂本九",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-18xw41s": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "95396c3c-b93f-45a7-af18-18cd0138df38",
+      "matchedTitle": "クリスマス・イブ",
+      "matchedArtist": "山下達郎",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1ed5p40": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-kkuesu": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "82b6dbbb-52ff-4454-9502-6964c642de55",
+      "matchedTitle": "Automatic",
+      "matchedArtist": "宇多田ヒカル",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1wctt48": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "b7f6baf4-3a06-472f-adff-b2ac6255469d",
+      "matchedTitle": "Flavor Of Life",
+      "matchedArtist": "宇多田ヒカル",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "j-pop",
+          "count": 1
+        },
+        {
+          "name": "dance-pop",
+          "count": 1
+        },
+        {
+          "name": "pop/rock",
+          "count": 1
+        },
+        {
+          "name": "alternative/indie rock",
+          "count": 1
+        },
+        {
+          "name": "club/dance",
+          "count": 1
+        },
+        {
+          "name": "contemporary pop/rock",
+          "count": 1
+        },
+        {
+          "name": "adult alternative pop/rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "electronic",
+          "score": 1
+        },
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-zxghs1": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "665f6806-11bd-41c7-b2fc-daf4c153f906",
+      "matchedTitle": "Pretender",
+      "matchedArtist": "Official髭男dism",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-126plas": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0bc5f62c-3e6f-4d74-8712-e39e805a2ad1",
+      "matchedTitle": "Subtitle",
+      "matchedArtist": "Official髭男dism",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1rwcrvj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d0f4845a-e4d3-44b4-abb2-680d90baeb02",
+      "matchedTitle": "夜に駆ける",
+      "matchedArtist": "YOASOBI",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-vuinbk": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ce50ce95-c5a7-495d-b232-58a104b3de78",
+      "matchedTitle": "アイドル",
+      "matchedArtist": "YOASOBI",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-19vv908": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "09343245-f0f4-4fa2-b65d-e1de0f046f38",
+      "matchedTitle": "群青",
+      "matchedArtist": "YOASOBI",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-32vaph": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f418e8ad-b328-4648-9996-4273d300808d",
+      "matchedTitle": "紅蓮華",
+      "matchedArtist": "LiSA",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ujaw68": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "99b455ec-7f1e-49b2-bcbc-b8ee3302dbb1",
+      "matchedTitle": "残酷な天使のテーゼ",
+      "matchedArtist": "高橋洋子",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "soundtrack",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1uaqgv8": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5bfb541f-5666-4ed7-8fc3-e1f94850bba0",
+      "matchedTitle": "魂のルフラン",
+      "matchedArtist": "高橋洋子",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-16ga3na": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "eeab40a5-9a43-40e6-b557-94a17be65964",
+      "matchedTitle": "世界が終るまでは…",
+      "matchedArtist": "WANDS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-13iskit": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "cea7214d-8b82-4067-9235-f21afbc33aef",
+      "matchedTitle": "そばかす",
+      "matchedArtist": "JUDY AND MARY",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1mpcrne": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "cd47e324-bd5c-46b6-8c7d-a385b590c270",
+      "matchedTitle": "リライト",
+      "matchedArtist": "ASIAN KUNG-FU GENERATION",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-cg2i0a": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "00acd080-3fed-43dd-90d0-49df55d3ed59",
+      "matchedTitle": "チェリー",
+      "matchedArtist": "スピッツ",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-16hs7tn": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "dc03b01e-f684-4a0a-89d3-1c4451ba87d4",
+      "matchedTitle": "ロビンソン",
+      "matchedArtist": "スピッツ",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-quvpmd": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "2cb2d2b2-a720-4c05-b292-0623bafe1d52",
+      "matchedTitle": "366日",
+      "matchedArtist": "HY",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-7ft063": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "85d884e4-da7a-4496-8377-4e5ac05b4351",
+      "matchedTitle": "マリーゴールド",
+      "matchedArtist": "あいみょん",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-2bsfz1": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "908f012d-22c9-4778-af6e-2738482bdf50",
+      "matchedTitle": "ドライフラワー",
+      "matchedArtist": "優里",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-15nmysv": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "bd09a525-86d8-46dc-85a5-4b305170c789",
+      "matchedTitle": "踊り子",
+      "matchedArtist": "Vaundy",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1ksyogx": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ffa02d1d-455c-4088-b440-a0eb1539d334",
+      "matchedTitle": "怪獣の花唄",
+      "matchedArtist": "Vaundy",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-5kt4dq": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "96c9bd7b-5d31-4b89-a716-2e26532bc38a",
+      "matchedTitle": "NIGHT DANCER",
+      "matchedArtist": "imase",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1586ic5": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "e1c44e5b-5383-4fe4-aba2-9c5f7653cb24",
+      "matchedTitle": "Gangnam Style",
+      "matchedArtist": "PSY",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1bqj0zz": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d47258db-8688-4878-a00d-70ef893e115e",
+      "matchedTitle": "Dynamite",
+      "matchedArtist": "BTS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1mgfg2": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "4b38141e-404e-4a32-bbf6-6a0c3dacc377",
+      "matchedTitle": "Butter",
+      "matchedArtist": "BTS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-9h3x5l": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5fd10149-6c3b-41b3-a3ae-a6b89fa5eebc",
+      "matchedTitle": "Fake Love",
+      "matchedArtist": "BTS",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1qplhg9": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "6ee29a84-2c37-40d0-a551-d7c5f90cacda",
+      "matchedTitle": "작은 것들을 위한 시 (Boy With Luv)",
+      "matchedArtist": "BTS & Halsey",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-100oz0": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "115fe98e-c6a4-4494-b4d4-31bc7bd8e977",
+      "matchedTitle": "DDU-DU DDU-DU",
+      "matchedArtist": "BLACKPINK",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-hp81ck": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "1ad26e8c-0365-4e25-bbf8-5bc4bca632aa",
+      "matchedTitle": "Kill This Love",
+      "matchedArtist": "BLACKPINK",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-wi1qn": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ddffbf3a-7b8f-4531-933c-e18ef375fb46",
+      "matchedTitle": "How You Like That",
+      "matchedArtist": "BLACKPINK",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ew1ikg": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "2159e6db-3825-4723-8640-cd19b83b80d0",
+      "matchedTitle": "Gee",
+      "matchedArtist": "Girls’ Generation",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-nn36lm": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "602c57c3-c99d-4673-a3d5-8c988f377dc2",
+      "matchedTitle": "Into the New World",
+      "matchedArtist": "Girls’ Generation",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-19filkk": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "9f155d3d-7383-41ff-b016-2fa7d3d18797",
+      "matchedTitle": "Nobody",
+      "matchedArtist": "Wonder Girls",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 3
+        },
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "dance",
+          "count": 1
+        },
+        {
+          "name": "j-pop",
+          "count": 1
+        },
+        {
+          "name": "disco",
+          "count": 1
+        },
+        {
+          "name": "k-pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 3
+        },
+        {
+          "id": "electronic",
+          "score": 2
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-o3cnfq": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "06f74a8a-a6ad-46f9-b6b7-8752943fc5df",
+      "matchedTitle": "Tell Me",
+      "matchedArtist": "Wonder Girls",
+      "matchScore": 100,
+      "confidence": 0.833,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 4
+        },
+        {
+          "name": "k-pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 4
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-1x178yw": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "104fc799-81a6-47d2-9a47-7c24af93ca0c",
+      "matchedTitle": "FANTASTIC BABY",
+      "matchedArtist": "BIGBANG",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "dance",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "electronic",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-wbiwrl": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "26042072-45b3-434b-825a-030117f0cf36",
+      "matchedTitle": "BANG BANG BANG",
+      "matchedArtist": "BIGBANG",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ptqcjn": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "51cb51e2-19ff-4a2c-9c98-0afd33a2f8e8",
+      "matchedTitle": "Eyes, Nose, Lips (Instrumental)",
+      "matchedArtist": "TAEYANG",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1rkl3og": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6a558837-7cf8-4888-b06e-11f4e0d6a75b",
+      "matchedTitle": "LOVE SCENARIO",
+      "matchedArtist": "iKON",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1y76hip": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "5b42c374-9167-4481-951e-ff9a389e51d7",
+      "matchedTitle": "Palette 中文字幕音樂錄影帶",
+      "matchedArtist": "IU & G‐DRAGON",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-4lomg6": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "a3fb959b-059c-4642-a4fc-bafada052f1c",
+      "matchedTitle": "Good Day",
+      "matchedArtist": "IU",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1mibmmq": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "097fffc7-3c8b-4496-ac0b-da999bdaa541",
+      "matchedTitle": "Hype boy",
+      "matchedArtist": "NewJeans",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1itrqj9": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "3c350f43-20af-4f1c-893c-d9f756a72525",
+      "matchedTitle": "Super Shy",
+      "matchedArtist": "NewJeans",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1le6wq": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "05ad2056-97f6-4aa4-bfb3-f12c6ecf2c7f",
+      "matchedTitle": "Psycho",
+      "matchedArtist": "Red Velvet",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-edutv5": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "25db131d-4437-4d07-a289-77d1223703e7",
+      "matchedTitle": "LOVE DIVE",
+      "matchedArtist": "IVE",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-16hbz2w": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b85c88bb-27a2-4773-bd0e-763144fe5c10",
+      "matchedTitle": "Next Level",
+      "matchedArtist": "aespa",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-14iaxbm": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "7caac8ae-81da-4538-8f0b-94234ed71fa1",
+      "matchedTitle": "Replay",
+      "matchedArtist": "SHINee",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-18fvco4": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "fc6bb400-26ae-4f2b-9b4d-53e20d8e79dd",
+      "matchedTitle": "Despacito",
+      "matchedArtist": "Luis Fonsi & Daddy Yankee",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-e2onul": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "1aca993d-c906-4b73-bede-c9d8b01647f6",
+      "matchedTitle": "Bailando",
+      "matchedArtist": "Enrique Iglesias",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1muknb9": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "84899338-5750-48e0-b04b-b30ac757f1d7",
+      "matchedTitle": "La Camisa Negra",
+      "matchedArtist": "Juanes",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1iiwpmc": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "415de345-ea70-4d7d-bbfb-0d29305aa563",
+      "matchedTitle": "Me Gustas Tu",
+      "matchedArtist": "Manu Chao",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-18rf39d": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "76c722da-1da8-4931-90a3-c846de8c2fac",
+      "matchedTitle": "Vivir mi vida",
+      "matchedArtist": "Marc Anthony",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "latin",
+          "count": 4
+        },
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "vocal",
+          "count": 1
+        },
+        {
+          "name": "salsa",
+          "count": 1
+        },
+        {
+          "name": "ballad",
+          "count": 1
+        },
+        {
+          "name": "latin pop",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-co8or0": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ec1d01f4-31c4-4f71-99b9-7f4c50fc264a",
+      "matchedTitle": "Gasolina",
+      "matchedArtist": "Daddy Yankee",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-obj19j": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "b0cacd47-d153-494f-b0c0-5eccef568705",
+      "matchedTitle": "Corazón espinado (A Thorn In My Heart) (Spanish-English dance remix)",
+      "matchedArtist": "Santana & Maná",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-8lpqqv": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "5bebd8b9-1749-49f0-bf66-03d99e5037f3",
+      "matchedTitle": "Bésame mucho",
+      "matchedArtist": "Cesária Évora",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "morna",
+          "count": 2
+        },
+        {
+          "name": "pop",
+          "count": 1
+        },
+        {
+          "name": "latin",
+          "count": 1
+        },
+        {
+          "name": "african",
+          "count": 1
+        },
+        {
+          "name": "afro-cuban",
+          "count": 1
+        },
+        {
+          "name": "bolero",
+          "count": 1
+        },
+        {
+          "name": "cabo verde",
+          "count": 1
+        },
+        {
+          "name": "cesária évora",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-kbhxla": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0085e108-5f0f-4015-b0be-de34800fdbe1",
+      "matchedTitle": "Garota de Ipanema",
+      "matchedArtist": "João Gilberto",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-a8w5jm": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "05388d45-33dd-4bd5-a5fb-e849292c8ef0",
+      "matchedTitle": "Chega de saudade",
+      "matchedArtist": "João Gilberto",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ptgn3q": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f5467f1f-6a0e-4a78-81fb-45945539e8e4",
+      "matchedTitle": "Mas que nada",
+      "matchedArtist": "Sérgio Mendes",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ukh7q5": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "df17795c-882b-4f71-94dd-6116de0cb299",
+      "matchedTitle": "Ai se eu te pego",
+      "matchedArtist": "Michel Teló",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-13e9v05": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f83ea4d2-2ba0-40ba-aaec-67d55e55b5c8",
+      "matchedTitle": "Con te partirò",
+      "matchedArtist": "Andrea Bocelli",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-dyb7al": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0394682e-c0f9-44db-b9ae-08c816afc827",
+      "matchedTitle": "Azzurro",
+      "matchedArtist": "Adriano Celentano",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-ep8apg": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6d72d556-b456-4454-b4bf-a8de1b1b336b",
+      "matchedTitle": "Sarà perché ti amo",
+      "matchedArtist": "Ricchi e Poveri",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-n4imwb": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "a272bd4e-a7b3-4b15-91f8-22cefc5d354b",
+      "matchedTitle": "Bella ciao",
+      "matchedArtist": "Manu Pilas",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1hzcxx7": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5a182d92-0417-4ae8-8440-c76a74107697",
+      "matchedTitle": "Major Tom (Völlig losgelöst)",
+      "matchedArtist": "Peter Schilling",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-9fh6wg": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c3590f82-1be3-4b59-8b98-4a3f561b944f",
+      "matchedTitle": "Du hast",
+      "matchedArtist": "Rammstein",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-q5zkl4": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "13415654-84ab-4024-a755-133721d6540f",
+      "matchedTitle": "Sonne",
+      "matchedArtist": "Rammstein",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1lzkoxc": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "32c3286e-b632-430c-9142-76c6095f6db8",
+      "matchedTitle": "Dragostea Din Tei",
+      "matchedArtist": "O‐Zone",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1moo8b9": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ca3c74b1-0365-41b6-8fd4-6826541e25b7",
+      "matchedTitle": "Svefn-g-englar",
+      "matchedArtist": "Sigur Rós",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1p3t8zo": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "de6e6290-df0a-4e20-bd4f-b3769f323ac5",
+      "matchedTitle": "La solitudine",
+      "matchedArtist": "Laura Pausini",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "pop",
+          "count": 3
+        },
+        {
+          "name": "ballad",
+          "count": 2
+        },
+        {
+          "name": "rock",
+          "count": 1
+        },
+        {
+          "name": "vocal",
+          "count": 1
+        },
+        {
+          "name": "soft rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "pop",
+          "score": 3
+        },
+        {
+          "id": "rock",
+          "score": 2
+        }
+      ],
+      "mappedMoods": []
+    },
+    "catalog-11hu446": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4de7ed80-7350-44b9-8c28-91d4b2329c05",
+      "matchedTitle": "Mutter",
+      "matchedArtist": "Rammstein",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "pop/rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "catalog-1mhls7c": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "946bfe29-cbb6-4e2f-96bd-006ff8f9bbf2",
+      "matchedTitle": "Chan Chan",
+      "matchedArtist": "Buena Vista Social Club",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1ye2bdv": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4ae9abe0-a3de-43e5-aa21-f7662fd9cf2a",
+      "matchedTitle": "River Flows In You",
+      "matchedArtist": "Yiruma",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "instrumental",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "light",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "instrumental-kabdcp": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "81a51ef7-111e-4d79-969d-927f005e256b",
+      "matchedTitle": "Kiss the rain",
+      "matchedArtist": "Yiruma",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1g332se": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "cefeea84-a5ed-4318-8ee8-95f3521541a8",
+      "matchedTitle": "May Be",
+      "matchedArtist": "Yiruma",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-dyni2x": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f6ec684c-d148-414b-8879-9d40794e0fee",
+      "matchedTitle": "Experience",
+      "matchedArtist": "Ludovico Einaudi",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-136bbsp": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d0ca384b-ed69-4772-bb1f-9d76ac4e9adc",
+      "matchedTitle": "Una mattina",
+      "matchedArtist": "Ludovico Einaudi",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-j4x9ay": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "5e33f22a-f1ff-407b-b02a-57eb0d4ac632",
+      "matchedTitle": "I giorni",
+      "matchedArtist": "Ludovico Einaudi",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1fagvr1": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "fcac08d6-58e2-4d09-8cf5-1e5fda1d0818",
+      "matchedTitle": "Comptine d’un autre été",
+      "matchedArtist": "Yann Tiersen",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "accordionist",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-9hyblj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d0fd7269-2dc1-4e26-b4d0-33ac71918475",
+      "matchedTitle": "La Valse d’Amélie",
+      "matchedArtist": "Yann Tiersen",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-h52ibb": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "4cf56035-c5f2-40e4-a7f1-a421c8803481",
+      "matchedTitle": "Merry Christmas Mr. Lawrence",
+      "matchedArtist": "坂本龍一",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-2y6mww": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "b795738d-39ef-4d90-96c1-7623f7a8e6f5",
+      "matchedTitle": "Energy Flow",
+      "matchedArtist": "坂本龍一",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "general classical crossover",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-wksbvd": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1inu2mf": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-bs12lu": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-hbdvgi": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-wxqtao": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "8d8fe1b4-d0a8-4956-aef8-6509563ce5b1",
+      "matchedTitle": "Clair De Lune",
+      "matchedArtist": "Claude Debussy",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-itiqd": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-lnl2xx": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "45518b1d-c05f-4c9c-ad3f-f848db8d0710",
+      "matchedTitle": "Gymnopédie no. 1",
+      "matchedArtist": "Erik Satie",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-10jmltj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "86fb2376-d424-46f9-ad52-b1079eca0582",
+      "matchedTitle": "Gnossienne No. 1",
+      "matchedArtist": "Erik Satie",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-tfy4qh": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "72634cde-da1a-45ba-9467-bbbb3382d005",
+      "matchedTitle": "Nocturne Op 9 No 2",
+      "matchedArtist": "Fryderyk Chopin",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1ary3q5": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-114hhyw": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "7308e409-dcc0-493f-9160-b8ad0274a512",
+      "matchedTitle": "Prelude in C major, BWV 846: I. Prelude",
+      "matchedArtist": "Johann Sebastian Bach",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-qyzx7d": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "898f2300-fe29-401a-86c9-891941be52ed",
+      "matchedTitle": "Air on the G String",
+      "matchedArtist": "Johann Sebastian Bach",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1cvnc3x": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-a2bxem": {
+      "status": "low_confidence",
+      "source": "musicbrainz",
+      "mbid": "ae8ad9ed-2990-4a64-af70-6cc5677ea40f",
+      "matchedTitle": "Für Elise - Reverie",
+      "matchedArtist": "Jon Batiste",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-z4cav3": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f9d89433-d93f-4e3d-889b-d28deef9205c",
+      "matchedTitle": "Canon in D",
+      "matchedArtist": "Johann Pachelbel",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-vv049s": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d7e79915-4bd5-4d86-b55b-71bb2ddea1a4",
+      "matchedTitle": "The Four Seasons (Spring)",
+      "matchedArtist": "Antonio Vivaldi",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1lu96h1": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "a02f7e4c-4502-4fa9-addc-b7170bfb423a",
+      "matchedTitle": "Eine Kleine Nachtmusik",
+      "matchedArtist": "Wolfgang Amadeus Mozart",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-b1c5yw": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "ea4dbbfd-5263-4ed2-af39-48e843221c71",
+      "matchedTitle": "Adagio for Strings",
+      "matchedArtist": "Samuel Barber",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-n6ht7l": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "c4a821d1-4ea8-4121-aeda-96d613fe4f7a",
+      "matchedTitle": "Recuerdos de la Alhambra",
+      "matchedArtist": "Francisco Tárrega",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1rlqqhj": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b05fd71d-96aa-4909-949a-aa5bfd1ae793",
+      "matchedTitle": "Capricho árabe",
+      "matchedArtist": "Francisco Tárrega",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-a9k9di": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "b0e712aa-c9ca-48fb-b09c-e67ca7c50afb",
+      "matchedTitle": "Asturias Leyenda",
+      "matchedArtist": "Isaac Albéniz",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1gh0kvg": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "f4c77c4a-c0ac-4695-ab19-bcb16f782796",
+      "matchedTitle": "Cavatina",
+      "matchedArtist": "Stanley Myers",
+      "matchScore": 95,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1suabzs": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-2732ah": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "bddd0ee1-a7f6-41d3-84d1-9e5260eb5489",
+      "matchedTitle": "Europa (Earth’s Cry Heaven’s Smile)",
+      "matchedArtist": "Santana",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1ruhus7": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "a5a002d0-cddc-4a17-997b-6691b7ed8ef6",
+      "matchedTitle": "Always With Me, Always With You",
+      "matchedArtist": "Joe Satriani",
+      "matchScore": 100,
+      "confidence": 0.167,
+      "externalTags": [
+        {
+          "name": "pop/rock",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1h9sm0p": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6eee0a99-e0eb-44f3-b235-2281e2be037c",
+      "matchedTitle": "For the Love of God",
+      "matchedArtist": "Steve Vai",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-18kcnqb": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "cbf3e021-6c0b-4521-acb1-d54e82c026b6",
+      "matchedTitle": "Apache",
+      "matchedArtist": "The Shadows",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-jbs660": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "085f3092-74c5-40a7-b3f0-a56cc5e98206",
+      "matchedTitle": "Chariots of Fire",
+      "matchedArtist": "Vangelis",
+      "matchScore": 95,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1oqu1pi": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "6f0f68b4-116a-47e0-8222-840343224a77",
+      "matchedTitle": "Time",
+      "matchedArtist": "Hans Zimmer",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-dl5dqp": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "0a47804e-c350-4ea0-91fa-82b67199cad9",
+      "matchedTitle": "Cornfield Chase",
+      "matchedArtist": "Hans Zimmer",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1nb235y": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "faba9564-2d33-4e66-a8cc-727858e62e09",
+      "matchedTitle": "On the Nature of Daylight",
+      "matchedArtist": "Max Richter",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1hz33q5": {
+      "status": "not_found",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-67l0hf": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "d3c02eaf-bea0-42ba-ad75-3ad30d3353b0",
+      "matchedTitle": "Arrival of the Birds",
+      "matchedArtist": "The Cinematic Orchestra",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "downtempo",
+          "count": 2
+        },
+        {
+          "name": "score",
+          "count": 2
+        },
+        {
+          "name": "electronic",
+          "count": 1
+        },
+        {
+          "name": "soundtrack",
+          "count": 1
+        },
+        {
+          "name": "classical",
+          "count": 1
+        },
+        {
+          "name": "chillout",
+          "count": 1
+        },
+        {
+          "name": "orchestral",
+          "count": 1
+        },
+        {
+          "name": "relaxed",
+          "count": 1
+        },
+        {
+          "name": "contemporary jazz",
+          "count": 1
+        },
+        {
+          "name": "contemporary classical",
+          "count": 1
+        },
+        {
+          "name": "nu jazz",
+          "count": 1
+        },
+        {
+          "name": "future jazz",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "electronic",
+          "score": 1
+        },
+        {
+          "id": "classic",
+          "score": 1
+        },
+        {
+          "id": "light",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "instrumental-161lzni": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "68c1c40c-606b-4642-b5a4-2860aaea53a0",
+      "matchedTitle": "A Walk",
+      "matchedArtist": "Tycho",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1ck4lki": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4e7338bc-eb84-44ad-8532-8329267992a0",
+      "matchedTitle": "Your Hand in Mine",
+      "matchedArtist": "Explosions in the Sky",
+      "matchScore": 100,
+      "confidence": 0.333,
+      "externalTags": [
+        {
+          "name": "post rock",
+          "count": 2
+        }
+      ],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-2w4kw7": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "d5f84da7-521d-44d0-aa13-c3ebd71a6f86",
+      "matchedTitle": "Near Light",
+      "matchedArtist": "Ólafur Arnalds",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1qk0vqh": {
+      "status": "matched_without_tags",
+      "source": "musicbrainz",
+      "mbid": "26185c8c-2413-4000-8f2b-573f153a46e9",
+      "matchedTitle": "Says",
+      "matchedArtist": "Nils Frahm",
+      "matchScore": 100,
+      "confidence": 0,
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    },
+    "instrumental-1obvf6u": {
+      "status": "matched",
+      "source": "musicbrainz",
+      "mbid": "4bfce89c-b1e6-407f-91ba-e13a81441a7d",
+      "matchedTitle": "I Can Almost See You",
+      "matchedArtist": "Hammock",
+      "matchScore": 100,
+      "confidence": 1,
+      "externalTags": [
+        {
+          "name": "ambient",
+          "count": 3
+        },
+        {
+          "name": "electronic",
+          "count": 2
+        },
+        {
+          "name": "post-rock",
+          "count": 2
+        },
+        {
+          "name": "shoegaze",
+          "count": 2
+        },
+        {
+          "name": "rock",
+          "count": 1
+        },
+        {
+          "name": "indie",
+          "count": 1
+        },
+        {
+          "name": "ethereal wave",
+          "count": 1
+        }
+      ],
+      "mappedGenres": [
+        {
+          "id": "light",
+          "score": 3
+        },
+        {
+          "id": "electronic",
+          "score": 2
+        },
+        {
+          "id": "rock",
+          "score": 1
+        }
+      ],
+      "mappedMoods": []
+    },
+    "instrumental-1atsamn": {
+      "status": "fetch_error",
+      "source": "musicbrainz",
+      "externalTags": [],
+      "mappedGenres": [],
+      "mappedMoods": []
+    }
+  }
+}

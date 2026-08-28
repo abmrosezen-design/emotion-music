@@ -6,6 +6,7 @@ import {
   type Song,
 } from './data'
 import { getLocalPreferenceScore, type LocalPreferenceProfile } from './localFeedback'
+import { verifiedGenreEvidence } from './catalog/verified-tags'
 
 export interface RecommendationAnswers {
   mood: MoodId
@@ -14,13 +15,16 @@ export interface RecommendationAnswers {
 }
 
 /**
- * A concrete language choice is a hard constraint. Only "random" may use
- * songs from multiple languages.
+ * Light music uses its own instrumental-only pool, so language is irrelevant.
+ * For every other genre, a concrete language remains a hard constraint.
  */
 export function getLanguagePool(
   answers: RecommendationAnswers,
   catalog: Song[] = songs,
 ): Song[] {
+  if (answers.genre === 'light') {
+    return catalog.filter((song) => song.instrumental && song.genres.includes('light'))
+  }
   if (answers.language === 'random') return catalog
   return catalog.filter((song) => song.language === answers.language)
 }
@@ -46,14 +50,22 @@ export function pickRecommendedSong(
     .map((song) => {
       let score = song.moods.includes(answers.mood) ? 55 : 10
 
-      if (answers.genre === 'random' || song.genres.includes(answers.genre)) {
+      const editorialGenreMatch = song.genres.includes(answers.genre as Exclude<GenreId, 'random'>)
+      const externalGenreMatch = verifiedGenreEvidence[song.id]?.includes(
+        answers.genre as Exclude<GenreId, 'random'>,
+      )
+
+      if (answers.genre === 'random' || editorialGenreMatch) {
         score += 30
+      } else if (externalGenreMatch) {
+        // External evidence supports discovery but stays below an editorial tag.
+        score += 18
       }
 
       score += getLocalPreferenceScore(song, profile)
 
       // A small exploration factor varies recommendations without ever
-      // bypassing the selected language pool.
+      // bypassing the selected candidate pool.
       score += Math.random() * 6
 
       return { song, score }

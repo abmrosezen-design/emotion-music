@@ -65,16 +65,83 @@ const steps = [
     description: '不需要分析原因。选择最靠近当下的那个词就好。',
   },
   {
+    eyebrow: 'TEXTURE',
+    title: '今天更想听什么样的声音？',
+    description: '选择轻音乐时，我们会跳过语言，只推荐没有人声的器乐。',
+  },
+  {
     eyebrow: 'LANGUAGE',
     title: '你想让哪一种语言陪着你？',
     description: '熟悉的字句，或是一种不必完全听懂的声音。',
   },
-  {
-    eyebrow: 'TEXTURE',
-    title: '今天更想听什么样的声音？',
-    description: '这是偏好，不是限制。我们会把情绪放在第一位。',
-  },
 ]
+
+const moodGenreSuggestions: Record<MoodId, GenreId[]> = {
+  happy: ['pop', 'rnb', 'electronic'],
+  calm: ['light', 'rnb', 'folk'],
+  low: ['light', 'blues', 'folk'],
+  lonely: ['folk', 'rnb', 'light'],
+  anxious: ['light', 'folk', 'classic'],
+  tired: ['light', 'folk', 'rnb'],
+  angry: ['rock', 'rap', 'electronic'],
+  unclear: ['folk', 'electronic', 'light'],
+}
+
+const HERO_EXAMPLE_STORAGE_KEY = 'emotion-music-last-hero-example'
+const heroExampleOpenings = [
+  '今天有些疲惫',
+  '此刻有一点低落',
+  '今晚忽然觉得有点孤单',
+  '脑海里的想法停不下来',
+  '刚结束忙碌的一天',
+  '今天心情很好',
+  '现在很平静',
+  '有些情绪说不清楚',
+  '心里有一点烦躁',
+  '想暂时放空自己',
+  '刚刚完成一件期待很久的事',
+  '外面在下雨，想安静一会儿',
+]
+const heroExampleRequests = [
+  '想听一首温柔的普通话歌',
+  '想听一首有力量的粤语摇滚',
+  '想听一点松弛的英语 R&B',
+  '想听一首安静的法语歌',
+  '想听一首细腻的日语流行歌',
+  '想听一些舒缓的韩语歌曲',
+  '想听一段没有人声的钢琴曲',
+  '想听一段吉他独奏',
+  '想听一首节奏鲜明的电子音乐',
+  '想听一首可以释放情绪的说唱',
+  '语言不限，想听一点经典旋律',
+  '不知道选什么，请随机推荐一首',
+]
+const heroExamples = heroExampleOpenings.flatMap((opening) =>
+  heroExampleRequests.map((request) => `${opening}，${request}`),
+)
+
+function pickHeroExample() {
+  let lastIndex = -1
+  try {
+    const storedIndex = Number.parseInt(localStorage.getItem(HERO_EXAMPLE_STORAGE_KEY) ?? '', 10)
+    if (Number.isInteger(storedIndex) && storedIndex >= 0 && storedIndex < heroExamples.length) {
+      lastIndex = storedIndex
+    }
+  } catch {
+    // A random example still works when browser storage is unavailable.
+  }
+
+  let nextIndex = Math.floor(Math.random() * (heroExamples.length - 1))
+  if (nextIndex >= lastIndex) nextIndex += 1
+  if (lastIndex < 0) nextIndex = Math.floor(Math.random() * heroExamples.length)
+
+  try {
+    localStorage.setItem(HERO_EXAMPLE_STORAGE_KEY, String(nextIndex))
+  } catch {
+    // The example itself is not dependent on browser storage.
+  }
+  return heroExamples[nextIndex]
+}
 
 function VideoBackdrop({ dimmed }: { dimmed: boolean }) {
   const videoBgRef = useRef<HTMLDivElement>(null)
@@ -412,11 +479,12 @@ function Hero({
   onDescribe: (description: string) => void
 }) {
   const [description, setDescription] = useState('')
+  const [example] = useState(pickHeroExample)
 
   const submitDescription = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const trimmed = description.trim()
-    if (trimmed) onDescribe(trimmed)
+    const textToAnalyze = description.trim() || example
+    onDescribe(textToAnalyze)
   }
 
   return (
@@ -451,19 +519,18 @@ function Hero({
             id="moment-description"
             value={description}
             onChange={(event) => setDescription(event.target.value.slice(0, 160))}
-            placeholder="例如：今天有些疲惫，想听一首安静的法语歌……"
+            placeholder={`例如：${example}……`}
             className="min-w-0 flex-1 bg-transparent py-3 font-body text-[13px] text-white outline-none placeholder:text-white/32 md:text-[14px]"
             autoComplete="off"
           />
           <button
             type="submit"
-            aria-label="分析此刻并推荐歌曲"
-            disabled={!description.trim()}
-            className="flex shrink-0 items-center gap-2 rounded-full bg-white px-4 py-3 text-[12px] font-medium text-black transition-all hover:scale-[1.02] disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-white/30 md:px-5 md:text-[13px]"
+            aria-label={description.trim() ? '分析此刻并推荐歌曲' : '使用当前示例推荐歌曲'}
+            className="flex shrink-0 items-center gap-2 rounded-full bg-white px-4 py-3 text-[12px] font-medium text-black transition-all hover:scale-[1.02] md:px-5 md:text-[13px]"
           >
             <Sparkles size={14} />
-            <span className="hidden sm:inline">分析并推荐</span>
-            <span className="sm:hidden">推荐</span>
+            <span className="hidden sm:inline">{description.trim() ? '分析并推荐' : '试试示例'}</span>
+            <span className="sm:hidden">{description.trim() ? '推荐' : '试用'}</span>
           </button>
         </div>
         <p className="mt-2 font-body text-[10px] text-white/35">本地分析，不会上传你的描述</p>
@@ -475,7 +542,7 @@ function Hero({
         }`}
       >
         <p className="max-w-[620px] font-body text-[14px] leading-relaxed text-white md:text-[15px]">
-          从情绪、语言到曲风，我们为你挑一首刚好贴近当下的歌。
+          从情绪、曲风到语言，我们为你挑一首刚好贴近当下的歌。
           <span className="text-white/55"> 每一次推荐，都不催促，只陪伴。</span>
         </p>
         <button
@@ -510,9 +577,11 @@ function Quiz({
   onNext: () => void
   panelRef: React.RefObject<HTMLDivElement | null>
 }) {
-  const currentValue = step === 0 ? answers.mood : step === 1 ? answers.language : answers.genre
-  const options = step === 0 ? moodOptions : step === 1 ? languageOptions : genreOptions
+  const currentValue = step === 0 ? answers.mood : step === 1 ? answers.genre : answers.language
+  const options = step === 0 ? moodOptions : step === 1 ? genreOptions : languageOptions
   const canContinue = Boolean(currentValue)
+  const completesJourney = step === steps.length - 1 || (step === 1 && answers.genre === 'light')
+  const suggestedGenreIds = answers.mood ? moodGenreSuggestions[answers.mood] : []
 
   return (
     <main className="soft-scrollbar fixed inset-0 z-20 overflow-y-auto px-4 pb-8 pt-28 md:px-8 md:pb-12 md:pt-32">
@@ -552,28 +621,39 @@ function Quiz({
               step === 0
                 ? 'grid-cols-2 md:grid-cols-4'
                 : step === 1
-                  ? 'grid-cols-2 md:grid-cols-4'
-                  : 'grid-cols-2 md:grid-cols-5'
+                  ? 'grid-cols-2 md:grid-cols-5'
+                  : 'grid-cols-2 md:grid-cols-4'
             }`}
           >
             {options.map((option) => {
               const selected = currentValue === option.id
+              const suggested = step === 1 && suggestedGenreIds.includes(option.id as GenreId)
               return (
                 <button
                   key={option.id}
                   type="button"
                   data-selected={selected}
+                  data-suggested={suggested || undefined}
                   onClick={() => onSelect(option.id)}
                   className={`choice-card min-h-[106px] rounded-[18px] border p-4 text-left transition-all duration-300 md:min-h-[118px] md:p-5 ${
                     selected
                       ? 'border-white/60 bg-white/[0.16] shadow-[0_10px_30px_rgba(0,0,0,0.2)]'
+                      : suggested
+                        ? 'border-white/25 bg-white/[0.07] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/[0.1]'
                       : 'border-white/10 bg-white/[0.035] hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.08]'
                   }`}
                 >
                   <div className="mb-5 flex items-start justify-between">
-                    <span className="font-serif text-[22px] italic text-white/65">
-                      {'symbol' in option ? option.symbol : '·'}
-                    </span>
+                    {suggested ? (
+                      <span className="flex items-center gap-1.5 font-body text-[9px] font-medium tracking-[0.12em] text-white/55">
+                        <Sparkles size={10} strokeWidth={1.5} />
+                        适合此刻
+                      </span>
+                    ) : (
+                      <span className="font-serif text-[22px] italic text-white/65">
+                        {'symbol' in option ? option.symbol : '·'}
+                      </span>
+                    )}
                     <span
                       className={`flex h-5 w-5 items-center justify-center rounded-full border transition-all ${
                         selected ? 'border-white bg-white text-black' : 'border-white/25 text-transparent'
@@ -606,8 +686,8 @@ function Quiz({
               onClick={onNext}
               className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[13px] font-medium text-black transition-all duration-300 hover:scale-[1.02] disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-white/30"
             >
-              {step === steps.length - 1 ? '听听此刻' : '继续'}
-              {step === steps.length - 1 ? <Sparkles size={14} /> : <ArrowRight size={14} />}
+              {completesJourney ? '听听此刻' : '继续'}
+              {completesJourney ? <Sparkles size={14} /> : <ArrowRight size={14} />}
             </button>
           </div>
         </section>
@@ -760,6 +840,7 @@ function Result({
   return (
     <main
       data-song-language={song.language}
+      data-song-instrumental={song.instrumental ? 'true' : 'false'}
       data-recommendation-id={recommendationId}
       className="soft-scrollbar fixed inset-0 z-20 overflow-y-auto px-4 pb-10 pt-24 md:px-8 md:pt-28"
     >
@@ -809,8 +890,12 @@ function Result({
 
                 <p className="mt-6 font-body text-[12px] text-white/42">
                   你现在感到<span className="mx-1 text-white/72">{labels.moods[answers.mood]}</span>，想听
-                  <span className="mx-1 text-white/72">{labels.languages[answers.language]}</span>的
-                  <span className="mx-1 text-white/72">{labels.genres[answers.genre]}</span>陪伴这种情绪。
+                  {answers.genre === 'light' ? (
+                    <><span className="mx-1 text-white/72">无人声的轻音乐</span>陪伴这种情绪。</>
+                  ) : (
+                    <><span className="mx-1 text-white/72">{labels.languages[answers.language]}</span>的
+                    <span className="mx-1 text-white/72">{labels.genres[answers.genre]}</span>陪伴这种情绪。</>
+                  )}
                 </p>
               </div>
             </div>
@@ -1108,7 +1193,7 @@ function App() {
       localPreferenceRef.current,
     )
     setCurrentSong(next)
-    setSeenSongIds((previous) => [...previous, next.id])
+    setSeenSongIds((previous) => previous.includes(next.id) ? previous : [...previous, next.id])
     registerRecommendation(requiredAnswers, next)
   }
 
@@ -1122,12 +1207,12 @@ function App() {
 
   const recommendFromDescription = (description: string) => {
     const inferredAnswers = analyzeDescription(description)
-    const selectedSong = pickRecommendedSong(inferredAnswers, [], undefined, localPreferenceRef.current)
+    const selectedSong = pickRecommendedSong(inferredAnswers, seenSongIds, undefined, localPreferenceRef.current)
 
     setHeroVisible(false)
     setAnswers(inferredAnswers)
     setCurrentSong(selectedSong)
-    setSeenSongIds([selectedSong.id])
+    setSeenSongIds((previous) => previous.includes(selectedSong.id) ? previous : [...previous, selectedSong.id])
     registerRecommendation(inferredAnswers, selectedSong)
     window.setTimeout(() => setView('result'), 320)
   }
@@ -1138,14 +1223,13 @@ function App() {
     setAnswers({})
     setCurrentSong(null)
     setRecommendationId('')
-    setSeenSongIds([])
     window.setTimeout(() => setHeroVisible(true), 100)
   }
 
   const selectCurrent = (value: MoodId | LanguageId | GenreId) => {
     if (step === 0) setAnswers((previous) => ({ ...previous, mood: value as MoodId }))
-    if (step === 1) setAnswers((previous) => ({ ...previous, language: value as LanguageId }))
-    if (step === 2) setAnswers((previous) => ({ ...previous, genre: value as GenreId }))
+    if (step === 1) setAnswers((previous) => ({ ...previous, genre: value as GenreId }))
+    if (step === 2) setAnswers((previous) => ({ ...previous, language: value as LanguageId }))
   }
 
   const back = () => {
@@ -1157,18 +1241,42 @@ function App() {
   }
 
   const next = () => {
-    const selected = step === 0 ? answers.mood : step === 1 ? answers.language : answers.genre
+    const selected = step === 0 ? answers.mood : step === 1 ? answers.genre : answers.language
     if (!selected) return
-    if (step < 2) {
+    if (step === 0) {
       setStep((previous) => previous + 1)
+      return
+    }
+
+    if (step === 1) {
+      if (answers.mood && answers.genre === 'light') {
+        const completed: Required<Answers> = {
+          mood: answers.mood,
+          genre: 'light',
+          language: 'random',
+        }
+        const selectedSong = pickRecommendedSong(completed, seenSongIds, undefined, localPreferenceRef.current)
+        setAnswers(completed)
+        setCurrentSong(selectedSong)
+        setSeenSongIds((previous) => previous.includes(selectedSong.id) ? previous : [...previous, selectedSong.id])
+        registerRecommendation(completed, selectedSong)
+        setView('result')
+        return
+      }
+      setStep(2)
       return
     }
 
     if (answers.mood && answers.language && answers.genre) {
       const completed = answers as Required<Answers>
-      const selectedSong = pickRecommendedSong(completed as RecommendationAnswers, [], undefined, localPreferenceRef.current)
+      const selectedSong = pickRecommendedSong(
+        completed as RecommendationAnswers,
+        seenSongIds,
+        undefined,
+        localPreferenceRef.current,
+      )
       setCurrentSong(selectedSong)
-      setSeenSongIds([selectedSong.id])
+      setSeenSongIds((previous) => previous.includes(selectedSong.id) ? previous : [...previous, selectedSong.id])
       registerRecommendation(completed, selectedSong)
       setView('result')
     }
@@ -1187,7 +1295,6 @@ function App() {
     setAnswers({})
     setCurrentSong(null)
     setRecommendationId('')
-    setSeenSongIds([])
     setStep(0)
     setView('quiz')
   }
