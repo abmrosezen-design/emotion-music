@@ -1,11 +1,53 @@
 {
-  "version": 1,
-  "generatedAt": "2026-08-28T07:39:50.152Z",
+  "version": 2,
+  "generatedAt": "2026-08-28T08:05:46.425Z",
   "source": "Bilibili public video search",
   "minimumConfidence": 0.72,
   "totalSongs": 273,
-  "matchedSongs": 44,
+  "matchedSongs": 65,
+  "trustedUpMids": [
+    "229733301",
+    "3493093607213343",
+    "9666167"
+  ],
+  "trustedUps": [
+    {
+      "mid": "229733301",
+      "name": "音乐私藏馆",
+      "indexedVideos": 350,
+      "totalVideos": 585,
+      "complete": false
+    },
+    {
+      "mid": "3493093607213343",
+      "name": "JLRS-LeoFM",
+      "indexedVideos": 300,
+      "totalVideos": 1856,
+      "complete": false
+    },
+    {
+      "mid": "9666167",
+      "name": "VV音乐局",
+      "indexedVideos": 200,
+      "totalVideos": 1026,
+      "complete": false
+    }
+  ],
+  "trustedUpVideos": 850,
+  "trustedUpMatches": 30,
   "videos": {
+    "sunset-infinite": {
+      "bvid": "BV1Cj411n76J",
+      "title": "【4K60FPS】陈奕迅《夕阳无限好》金曲神级现场！夕阳无限好",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Cj411n76J"
+    },
     "spring-summer-autumn-winter": {
       "bvid": "BV1GT411h76H",
       "title": "在百万豪装录音棚大声听 张国荣 《 春夏秋冬 》【Hi-res】",
@@ -13,16 +55,58 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av485590880"
     },
-    "yellow": {
-      "bvid": "BV15h411K7dm",
-      "title": "黑胶试听[4K·高音质] | Yellow - Coldplay - Parachutes",
-      "author": "玩哆啦",
+    "boundless-oceans": {
+      "bvid": "BV1F1grzFEiB",
+      "title": "【4K60FPS】黄家驹《海阔天空》最后公开演唱现场！再见却成了诀别",
+      "author": "音乐私藏馆",
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av230051561"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1F1grzFEiB"
+    },
+    "the-ordinary-road": {
+      "bvid": "BV1bo4y1A7S9",
+      "title": "【私藏馆】朴树《平凡之路》经典神作！我曾经跨过山和大海",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1bo4y1A7S9"
+    },
+    "encounter": {
+      "bvid": "BV1Q44y1M7bB",
+      "title": "【私藏馆】孙燕姿《遇见》爆火神曲！祝大家节日快乐！",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Q44y1M7bB"
+    },
+    "yellow": {
+      "bvid": "BV13u4m1A7kq",
+      "title": "【4K60FPS】酷玩Coldplay《Yellow》万人大合唱现场！人要带着希望生活",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV13u4m1A7kq"
     },
     "no-surprises": {
       "bvid": "BV15Y4y1P78z",
@@ -31,6 +115,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 285546994,
+      "upName": "swansongw",
       "pageUrl": "http://www.bilibili.com/video/av643981419"
     },
     "lovely-day": {
@@ -40,6 +127,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3932357,
+      "upName": "xcp_icsigma",
       "pageUrl": "http://www.bilibili.com/video/av94313086"
     },
     "la-vie-en-rose": {
@@ -49,7 +139,22 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 43034197,
+      "upName": "遇见法语Tina老师",
       "pageUrl": "http://www.bilibili.com/video/av581352340"
+    },
+    "first-love": {
+      "bvid": "BV1TjmUYVE6X",
+      "title": "【4K60FPS】宇多田光《First Love》经典现场！你会想起初恋吗？",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1TjmUYVE6X"
     },
     "sparkle": {
       "bvid": "BV1gW4966E5i",
@@ -58,15 +163,21 @@
       "confidence": 0.894,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 24621733,
+      "upName": "卷心儿",
       "pageUrl": "http://www.bilibili.com/video/av117167580253540"
     },
     "one-summers-day": {
       "bvid": "BV1ov411y7Qv",
       "title": "久石让 最好听的版本： 宫崎骏《 One Summers Day /那个夏天》插曲 《千与千寻》 音乐 会现场版",
       "author": "边旅行边流浪",
-      "confidence": 0.968,
+      "confidence": 0.989,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 384842158,
+      "upName": "边旅行边流浪",
       "pageUrl": "http://www.bilibili.com/video/av244364497"
     },
     "nuvole-bianche": {
@@ -76,6 +187,9 @@
       "confidence": 0.926,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 440121192,
+      "upName": "JLRS日落fm",
       "pageUrl": "http://www.bilibili.com/video/av700267116"
     },
     "hopipolla": {
@@ -85,42 +199,93 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 29454473,
+      "upName": "禾斗月半",
       "pageUrl": "http://www.bilibili.com/video/av13003827"
     },
-    "years-like-song": {
-      "bvid": "BV1xx4y187fF",
-      "title": "“当世事再没完美，可远在 岁月如歌 中找你”｜ 陈奕迅 -《 岁月如歌 》",
-      "author": "小金不睡就不会困_",
-      "confidence": 0.968,
-      "exactTitle": true,
-      "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av1003239741"
-    },
-    "rice-field": {
-      "bvid": "BV1Qyt6zQEG9",
-      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《 稻香 》- 周杰伦 -‘还记得你说家是唯一的城堡’",
-      "author": "VV音乐局",
+    "fuji-mountain": {
+      "bvid": "BV1H3411C7ZJ",
+      "title": "【4K60FPS】陈奕迅《富士山下》神级现场！你听懂了吗？",
+      "author": "音乐私藏馆",
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av114988823878223"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1H3411C7ZJ"
     },
-    "no-need-to-guess": {
-      "bvid": "BV1KoqVBGExr",
-      "title": "【Hi-Res无损】“孤光可自燃，何须问春寒。”——《 不用去猜 (Original)》 Jony J",
-      "author": "大胖脸听歌",
-      "confidence": 0.926,
+    "years-like-song": {
+      "bvid": "BV1H52cBREsS",
+      "title": "陈奕迅《岁月如歌（《冲上云霄》主题曲）》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 0.915,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av115734906667329"
+      "sourceType": "trusted_up",
+      "upMid": "3493093607213343",
+      "upName": "JLRS-LeoFM",
+      "pageUrl": "https://www.bilibili.com/video/BV1H52cBREsS"
+    },
+    "glorious-years": {
+      "bvid": "BV16r4y1z7SE",
+      "title": "【私藏馆】Beyond《光辉岁月》《真的爱你》《海阔天空》封神金曲最高音质！",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV16r4y1z7SE"
+    },
+    "rice-field": {
+      "bvid": "BV1Ki4y1y7HC",
+      "title": "【私藏馆】周杰伦《稻香》超治愈神作！希望疫情早点过去",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Ki4y1y7HC"
+    },
+    "no-need-to-guess": {
+      "bvid": "BV1Pf4y1t748",
+      "title": "“时间比LV还贵”《 不用去猜 》 Jony J",
+      "author": "陈横竖撇捺",
+      "confidence": 0.979,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 7871180,
+      "upName": "陈横竖撇捺",
+      "pageUrl": "http://www.bilibili.com/video/av289621090"
+    },
+    "fix-you": {
+      "bvid": "BV17U4y1u7HY",
+      "title": "【4K60FPS】酷玩Coldplay《Fix You》万人大合唱现场！观众都哭了！",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV17U4y1u7HY"
     },
     "aint-no-sunshine": {
       "bvid": "BV1564y1q7bC",
       "title": "黑胶【Soul】再也没有了阳光《 Ain ’ t No Sunshine 》 Bill Withers",
       "author": "声堂奇妙皓",
-      "confidence": 0.968,
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 71597538,
+      "upName": "声堂奇妙皓",
       "pageUrl": "http://www.bilibili.com/video/av759849009"
     },
     "ne-me-quitte-pas": {
@@ -130,6 +295,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 43034197,
+      "upName": "遇见法语Tina老师",
       "pageUrl": "http://www.bilibili.com/video/av836307564"
     },
     "formidable": {
@@ -139,6 +307,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 381786609,
+      "upName": "我中意食烧鹅髀",
       "pageUrl": "http://www.bilibili.com/video/av686232819"
     },
     "la-boheme": {
@@ -148,6 +319,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 660227554,
+      "upName": "法国歌曲",
       "pageUrl": "http://www.bilibili.com/video/av286663062"
     },
     "basique": {
@@ -157,6 +331,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 82565136,
+      "upName": "Ericenroute",
       "pageUrl": "http://www.bilibili.com/video/av18336881"
     },
     "plastic-love": {
@@ -166,15 +343,21 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 440121192,
+      "upName": "JLRS日落fm",
       "pageUrl": "http://www.bilibili.com/video/av613173854"
     },
     "stay-with-me-miki": {
       "bvid": "BV1wJ4ezQEHQ",
       "title": "松原みき 《 真夜中のドア / Stay With Me 》百万豪装录音棚大声听",
       "author": "JLRS-LeoFM",
-      "confidence": 0.894,
+      "confidence": 0.979,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av115376578890887"
     },
     "bling-bang-bang-born": {
@@ -184,6 +367,9 @@
       "confidence": 0.894,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3546619152698053,
+      "upName": "Creepy_Nuts",
       "pageUrl": "http://www.bilibili.com/video/av1952287775"
     },
     "ditto": {
@@ -193,6 +379,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 67018303,
+      "upName": "歌威贵_grey",
       "pageUrl": "http://www.bilibili.com/video/av112952690672613"
     },
     "two-hundred-percent": {
@@ -202,6 +391,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 19934327,
+      "upName": "今天的鸡公煲有点辣",
       "pageUrl": "http://www.bilibili.com/video/av17455478"
     },
     "eres": {
@@ -211,6 +403,9 @@
       "confidence": 0.894,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 1456820531,
+      "upName": "仲夏广英",
       "pageUrl": "http://www.bilibili.com/video/av878389157"
     },
     "volare": {
@@ -220,6 +415,9 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 330699419,
+      "upName": "电与琴",
       "pageUrl": "http://www.bilibili.com/video/av1804615468"
     },
     "catalog-11re4ld": {
@@ -229,6 +427,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 9666167,
+      "upName": "VV音乐局",
       "pageUrl": "http://www.bilibili.com/video/av114943022142748"
     },
     "catalog-1nm2yy2": {
@@ -238,34 +439,82 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 9666167,
+      "upName": "VV音乐局",
       "pageUrl": "http://www.bilibili.com/video/av114912554719208"
     },
-    "catalog-qbq9tu": {
-      "bvid": "BV17z8R6FEh7",
-      "title": "【4K修复】 江南 - 林俊杰 【Hi-Res无损音质】",
-      "author": "小炳音乐",
-      "confidence": 0.926,
-      "exactTitle": true,
-      "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av117162345766234"
-    },
-    "catalog-1fkz1z9": {
-      "bvid": "BV16L41167hp",
-      "title": "『4K无损』 可惜不是你 ~ 梁静茹 ★ 可惜不是你 陪我到最后★",
-      "author": "柒乐诗",
+    "catalog-nik13t": {
+      "bvid": "BV1Fu41117eJ",
+      "title": "【4K60FPS】周杰伦《七里香》神级现场！生日快乐！",
+      "author": "音乐私藏馆",
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av443755709"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Fu41117eJ"
     },
-    "catalog-8z1dds": {
-      "bvid": "BV1ZM411B7YM",
-      "title": "在百万豪装录音棚大声听 孙燕姿 《 我怀念的 》【Hi-res】",
-      "author": "JLRS-LeoFM",
-      "confidence": 0.926,
+    "catalog-qbq9tu": {
+      "bvid": "BV1Mm4FzvEkw",
+      "title": "【4K60FPS】林俊杰、李健《江南》《传奇》强强联手现场！如听仙乐",
+      "author": "音乐私藏馆",
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av521002155"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Mm4FzvEkw"
+    },
+    "catalog-87o1i0": {
+      "bvid": "BV1Wg411s7z7",
+      "title": "【私藏馆】林俊杰《修炼爱情》经典现场！忘不了那个人就投降",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Wg411s7z7"
+    },
+    "catalog-1b0zezp": {
+      "bvid": "BV1yJMq6YE5A",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《勇气》- 梁静茹 -‘ 爱真的需要勇气 来面对流言蜚语’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "9666167",
+      "upName": "VV音乐局",
+      "pageUrl": "https://www.bilibili.com/video/BV1yJMq6YE5A"
+    },
+    "catalog-1fkz1z9": {
+      "bvid": "BV1Ekub6zEH8",
+      "title": "梁静茹 《可惜不是你》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "3493093607213343",
+      "upName": "JLRS-LeoFM",
+      "pageUrl": "https://www.bilibili.com/video/BV1Ekub6zEH8"
+    },
+    "catalog-8z1dds": {
+      "bvid": "BV1Bp4y1V79u",
+      "title": "【4K60FPS】孙燕姿《我怀念的》经典神级现场！我怀念的是当初的时光",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1Bp4y1V79u"
     },
     "catalog-s2r0ob": {
       "bvid": "BV1p94y1J7yc",
@@ -274,6 +523,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av366250676"
     },
     "catalog-gjprir": {
@@ -283,16 +535,34 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av363300227"
     },
-    "catalog-1piuq3k": {
-      "bvid": "BV1oN4y1r7WV",
-      "title": "在百万豪装录音棚大声听 赵雷 《 成都 》【Hi-res】",
+    "catalog-8jitrr": {
+      "bvid": "BV1EgcQzhEcZ",
+      "title": "岑宁儿《追光者（《夏至未至》插曲）》百万豪装录音棚大声听",
       "author": "JLRS-LeoFM",
+      "confidence": 0.989,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "3493093607213343",
+      "upName": "JLRS-LeoFM",
+      "pageUrl": "https://www.bilibili.com/video/BV1EgcQzhEcZ"
+    },
+    "catalog-1piuq3k": {
+      "bvid": "BV1eT4y1178r",
+      "title": "【4K60FPS】赵雷《成都》经典神作！每个人心里都有一个成都",
+      "author": "音乐私藏馆",
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av875134516"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1eT4y1178r"
     },
     "catalog-hdwzas": {
       "bvid": "BV1XM4m1y79z",
@@ -301,6 +571,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av1306384201"
     },
     "catalog-t2cbdc": {
@@ -310,15 +583,33 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 35246585,
+      "upName": "音乐的产后料理房",
       "pageUrl": "http://www.bilibili.com/video/av113600727421127"
+    },
+    "catalog-1b2in2p": {
+      "bvid": "BV1T94y1s7G3",
+      "title": "【新现场】李克勤《月半小夜曲》弦乐现场！我的心仍然被她占有",
+      "author": "音乐私藏馆",
+      "confidence": 0.798,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1T94y1s7G3"
     },
     "catalog-jot1k2": {
       "bvid": "BV17PPWeAESy",
       "title": "陈慧娴 《 飘雪 》百万豪装录音棚大声听",
       "author": "JLRS-LeoFM",
-      "confidence": 0.968,
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av114058023930076"
     },
     "catalog-1j7rv1y": {
@@ -328,6 +619,9 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 301733928,
+      "upName": "造梦可汗",
       "pageUrl": "http://www.bilibili.com/video/av114478612021263"
     },
     "catalog-1tjdvww": {
@@ -337,16 +631,22 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av910038966"
     },
     "catalog-as06sf": {
       "bvid": "BV1ZjGy6pE3x",
-      "title": "杨千嬅 《 可惜我是水瓶座 》百万豪装录音棚大声听",
+      "title": "杨千嬅《可惜我是水瓶座》百万豪装录音棚大声听",
       "author": "JLRS-LeoFM",
-      "confidence": 0.968,
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av116645674616732"
+      "sourceType": "trusted_up",
+      "upMid": "3493093607213343",
+      "upName": "JLRS-LeoFM",
+      "pageUrl": "https://www.bilibili.com/video/BV1ZjGy6pE3x"
     },
     "catalog-kev2os": {
       "bvid": "BV1iN4y1J77s",
@@ -355,34 +655,118 @@
       "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av879356253"
     },
-    "catalog-10xce6r": {
-      "bvid": "BV14V4y1Q7Ff",
-      "title": "在百万豪装录音棚大声听 陈奕迅 《 陀飞轮 》【Hi-res】",
-      "author": "JLRS-LeoFM",
-      "confidence": 0.926,
+    "catalog-1d5grva": {
+      "bvid": "BV1TV4y1q7qV",
+      "title": "【私藏馆】陈奕迅《最佳损友》经典神级现场！知己难求",
+      "author": "音乐私藏馆",
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av866816570"
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1TV4y1q7qV"
+    },
+    "catalog-10xce6r": {
+      "bvid": "BV1nSb16BE2C",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《陀飞轮》- 陈奕迅 -‘曾付出 几多心跳 来换取一堆堆的发票’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "9666167",
+      "upName": "VV音乐局",
+      "pageUrl": "https://www.bilibili.com/video/BV1nSb16BE2C"
+    },
+    "catalog-didyi1": {
+      "bvid": "BV1kdqrB2EPE",
+      "title": "【冬至】陈奕迅《葡萄成熟时》节日经典神曲！我陪你们任性了六年",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1kdqrB2EPE"
+    },
+    "catalog-qgxoot": {
+      "bvid": "BV1j34y1o7SK",
+      "title": "【4K60FPS】梅艳芳《夕阳之歌 》告别现场！这是一个传奇！",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1j34y1o7SK"
+    },
+    "catalog-3cpu3o": {
+      "bvid": "BV1iT4y1e7UA",
+      "title": "【4K60FPS】张国荣、许冠杰《沉默是金》经典现场！致敬张国荣！",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1iT4y1e7UA"
+    },
+    "catalog-rmijlm": {
+      "bvid": "BV1qs4y177wL",
+      "title": "【怀念专题】张国荣《风继续吹》经典感人现场！他是一个传奇",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV1qs4y177wL"
+    },
+    "catalog-1cwydf": {
+      "bvid": "BV1MTNU6hEKX",
+      "title": "【𝐇𝐢-𝐑𝐞𝐬无损音质】｜《冷雨夜》- BEYOND -‘在雨中漫步 尝水中的味道’",
+      "author": "VV音乐局",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "9666167",
+      "upName": "VV音乐局",
+      "pageUrl": "https://www.bilibili.com/video/BV1MTNU6hEKX"
     },
     "catalog-1xx3i4y": {
       "bvid": "BV1ZonCzREKE",
       "title": "Eagles 《 Hotel California 》百万豪装录音棚大声听",
       "author": "JLRS-LeoFM",
-      "confidence": 0.968,
+      "confidence": 1,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 3493093607213343,
+      "upName": "JLRS-LeoFM",
       "pageUrl": "http://www.bilibili.com/video/av115291921057949"
     },
     "catalog-14lrk6j": {
-      "bvid": "BV1bJVyzsETD",
-      "title": "「1977年的宇宙神专」 Dreams - Fleetwood Mac 佛利伍麦克",
-      "author": "JLRS日落fm",
-      "confidence": 0.894,
+      "bvid": "BV1cyd7YAE1V",
+      "title": "【LEX吉他】《 Dreams 》 Fleetwood Mac （课件可下载）",
+      "author": "蓝调琴魔",
+      "confidence": 0.979,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av114458647076124"
+      "sourceType": "global_search",
+      "upMid": 326955450,
+      "upName": "蓝调琴魔",
+      "pageUrl": "http://www.bilibili.com/video/av114299766904490"
     },
     "catalog-138iu93": {
       "bvid": "BV1YG4y1h7Kp",
@@ -391,16 +775,46 @@
       "confidence": 0.968,
       "exactTitle": true,
       "artistMatch": true,
+      "sourceType": "global_search",
+      "upMid": 157347985,
+      "upName": "彼特霓客Beatnik",
       "pageUrl": "http://www.bilibili.com/video/av817019417"
     },
     "catalog-12qbi8n": {
-      "bvid": "BV1YJ411N72k",
-      "title": "【 LET IT BE 】 The Beatles",
-      "author": "卡秾艺术",
-      "confidence": 0.968,
+      "bvid": "BV1PHxtzPEc7",
+      "title": "英文歌学唱｜ The Beatles 《 Let it be 》｜保姆级标注｜X",
+      "author": "亲爱的阿夏",
+      "confidence": 0.979,
       "exactTitle": true,
       "artistMatch": true,
-      "pageUrl": "http://www.bilibili.com/video/av67161608"
+      "sourceType": "global_search",
+      "upMid": 277350681,
+      "upName": "亲爱的阿夏",
+      "pageUrl": "http://www.bilibili.com/video/av115315828791344"
+    },
+    "catalog-m2k5dt": {
+      "bvid": "BV11h411j7K3",
+      "title": "【4K60FPS】威肯和A妹《Save Your Tears》神仙合唱现场！这是什么王炸组合",
+      "author": "音乐私藏馆",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "229733301",
+      "upName": "音乐私藏馆",
+      "pageUrl": "https://www.bilibili.com/video/BV11h411j7K3"
+    },
+    "catalog-nad5eh": {
+      "bvid": "BV1P69KBZEjE",
+      "title": "Ed Sheeran《Perfect》百万豪装录音棚大声听",
+      "author": "JLRS-LeoFM",
+      "confidence": 1,
+      "exactTitle": true,
+      "artistMatch": true,
+      "sourceType": "trusted_up",
+      "upMid": "3493093607213343",
+      "upName": "JLRS-LeoFM",
+      "pageUrl": "https://www.bilibili.com/video/BV1P69KBZEjE"
     }
   }
 }

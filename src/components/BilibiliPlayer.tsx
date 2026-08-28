@@ -6,6 +6,9 @@ export interface BilibiliVideo {
   author: string
   confidence: number
   pageUrl: string
+  sourceType?: string
+  upMid?: string | number | null
+  upName?: string
 }
 
 interface BilibiliPlayerProps {
@@ -42,7 +45,10 @@ export default function BilibiliPlayer({ songTitle, video, active, onOpen, onClo
       <div className="flex items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
         <div className="min-w-0">
           <p className="truncate font-body text-[11px] font-medium text-white/80">正在播放：{songTitle}</p>
-          <p className="mt-0.5 truncate font-body text-[9px] text-white/35">视频来源：{video.author || '哔哩哔哩创作者'}</p>
+          <p className="mt-0.5 truncate font-body text-[9px] text-white/35">
+            视频来源：{video.upName || video.author || '哔哩哔哩创作者'}
+            {video.sourceType === 'trusted_up' ? ' · 指定 UP 主' : ''}
+          </p>
         </div>
         <div className="flex shrink-0 items-center gap-1">
           <a
