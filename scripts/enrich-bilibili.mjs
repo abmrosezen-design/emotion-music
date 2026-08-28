@@ -12,6 +12,9 @@ const reportPath = resolve(projectRoot, 'docs/BILIBILI_PLAYBACK_REPORT.zh-CN.md'
 const searchEndpoint = 'https://api.bilibili.com/x/web-interface/search/type'
 const minimumConfidence = 0.72
 const trustedUpMids = ['229733301', '3493093607213343', '9666167']
+const trustedUpSearches = [
+  { mid: '3493093607213343', keyword: '陈奕迅', artist: '陈奕迅' },
+]
 const mixinKeyEncTab = [
   46, 47, 18, 2, 53, 8, 23, 32, 15, 50, 10, 31, 58, 3, 45, 35,
   27, 43, 5, 49, 33, 9, 42, 19, 29, 28, 14, 39, 12, 38, 41, 13,
@@ -146,8 +149,10 @@ function signWbi(params, { imgKey, subKey }) {
   return `${query}&w_rid=${wRid}`
 }
 
-async function fetchTrustedUpPage(mid, page, wbiKeys) {
-  const query = signWbi({ mid, pn: page, ps: 50, order: 'pubdate' }, wbiKeys)
+async function fetchTrustedUpPage(mid, page, wbiKeys, keyword = '') {
+  const params = { mid, pn: page, ps: 50, order: 'pubdate' }
+  if (keyword) params.keyword = keyword
+  const query = signWbi(params, wbiKeys)
   const url = `https://api.bilibili.com/x/space/wbi/arc/search?${query}`
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const response = await fetch(url, { headers: withAnonymousCookie(`https://space.bilibili.com/${mid}/`) })
@@ -163,7 +168,7 @@ async function fetchTrustedUpPage(mid, page, wbiKeys) {
   throw new Error(`Bilibili UP ${mid} page ${page} failed after retries`)
 }
 
-function normalizeUpVideo(video, mid, upName) {
+function normalizeUpVideo(video, mid, upName, targetedArtist = '') {
   return {
     bvid: video.bvid,
     title: video.title,
@@ -173,21 +178,90 @@ function normalizeUpVideo(video, mid, upName) {
     arcurl: `https://www.bilibili.com/video/${video.bvid}`,
     mid,
     upName: video.author || upName,
-    sourceType: 'trusted_up',
+    sourceType: targetedArtist ? 'trusted_up_search' : 'trusted_up',
+    targetedArtist: targetedArtist || undefined,
   }
+}
+
+function deduplicateVideos(videos) {
+  return [...new Map(videos.map((video) => [video.bvid, video])).values()]
+}
+
+async function loadTrustedUpSearch(search, cache, wbiKeys) {
+  const cacheKey = `${search.mid}:search:${search.keyword}`
+  const refresh = process.argv.includes('--refresh-trusted-ups')
+  const existing = refresh ? null : cache[cacheKey]
+  const entry = existing ?? {
+    mid: search.mid,
+    name: '',
+    keyword: search.keyword,
+    artist: search.artist,
+    total: 0,
+    nextPage: 1,
+    complete: false,
+    videos: [],
+  }
+  const seen = new Set(entry.videos.map((video) => video.bvid))
+
+  while (!entry.complete && entry.nextPage <= 20) {
+    const page = entry.nextPage
+    try {
+      const payload = await fetchTrustedUpPage(search.mid, page, wbiKeys, search.keyword)
+      const videos = payload.data.list?.vlist ?? []
+      entry.total = Number(payload.data.page?.count ?? entry.total ?? 0)
+      entry.name = videos[0]?.author || entry.name || search.mid
+      videos.forEach((video) => {
+        if (!video.bvid || seen.has(video.bvid)) return
+        seen.add(video.bvid)
+        entry.videos.push(normalizeUpVideo(video, search.mid, entry.name, search.artist))
+      })
+      entry.nextPage = page + 1
+      entry.complete = videos.length < 50 || entry.videos.length >= entry.total
+      entry.updatedAt = new Date().toISOString()
+      delete entry.error
+      cache[cacheKey] = entry
+      await writeFile(trustedUpCachePath, `${JSON.stringify(cache, null, 2)}\n`, 'utf8')
+      console.log(`trusted_up_search=${search.mid} keyword=${search.keyword} videos=${entry.videos.length}/${entry.total} page=${page}`)
+      await wait(1800)
+    } catch (error) {
+      entry.error = error instanceof Error ? error.message : String(error)
+      cache[cacheKey] = entry
+      await writeFile(trustedUpCachePath, `${JSON.stringify(cache, null, 2)}\n`, 'utf8')
+      console.warn(entry.error)
+      break
+    }
+  }
+
+  return entry.videos
 }
 
 async function loadTrustedUpVideos() {
   const cache = await loadJson(trustedUpCachePath, {})
   const refresh = process.argv.includes('--refresh-trusted-ups')
   if (process.argv.includes('--cache-only')) {
-    return { cache, videos: trustedUpMids.flatMap((mid) => cache[mid]?.videos ?? []) }
+    const targetedVideos = trustedUpSearches.flatMap((search) => (
+      cache[`${search.mid}:search:${search.keyword}`]?.videos ?? []
+    ))
+    const videos = deduplicateVideos([
+      ...trustedUpMids.flatMap((mid) => cache[mid]?.videos ?? []),
+      ...targetedVideos,
+    ])
+    return {
+      cache,
+      videos,
+      targetedVideos,
+    }
   }
   await prepareAnonymousSession()
   const wbiKeys = await getWbiKeys()
   const allVideos = []
+  const targetedOnly = process.argv.includes('--targeted-only')
 
   for (const mid of trustedUpMids) {
+    if (targetedOnly) {
+      allVideos.push(...(cache[mid]?.videos ?? []))
+      continue
+    }
     const existing = refresh ? null : cache[mid]
     const entry = existing ?? { mid, name: '', total: 0, nextPage: 1, complete: false, videos: [] }
     const seen = new Set(entry.videos.map((video) => video.bvid))
@@ -223,7 +297,12 @@ async function loadTrustedUpVideos() {
     allVideos.push(...entry.videos)
   }
 
-  return { cache, videos: allVideos }
+  const targetedVideos = []
+  for (const search of trustedUpSearches) {
+    targetedVideos.push(...await loadTrustedUpSearch(search, cache, wbiKeys))
+  }
+
+  return { cache, videos: deduplicateVideos([...allVideos, ...targetedVideos]), targetedVideos }
 }
 
 async function fetchSearch(song) {
@@ -279,9 +358,17 @@ async function main() {
       await wait(Math.max(0, 420 - (Date.now() - requestStartedAt)))
     }
 
+    const targetedBest = selectBestMatch(
+      song,
+      trustedUpData.targetedVideos.filter((video) => normalize(video.targetedArtist) === normalize(song.artist)),
+    )
     const trustedBest = selectBestMatch(song, trustedUpData.videos)
     const globalBest = selectBestMatch(song, payload.data?.result ?? [])
-    const best = trustedBest?.confidence >= minimumConfidence ? trustedBest : globalBest
+    const best = targetedBest?.confidence >= minimumConfidence
+      ? targetedBest
+      : trustedBest?.confidence >= minimumConfidence
+        ? trustedBest
+        : globalBest
     if (best && best.confidence >= minimumConfidence) {
       matches[song.id] = {
         bvid: best.candidate.bvid,
@@ -310,6 +397,7 @@ async function main() {
     totalSongs: songs.length,
     matchedSongs: Object.keys(matches).length,
     trustedUpMids,
+    trustedUpSearches,
     trustedUps: trustedUpMids.map((mid) => ({
       mid,
       name: trustedUpData.cache[mid]?.name || mid,
@@ -318,7 +406,8 @@ async function main() {
       complete: Boolean(trustedUpData.cache[mid]?.complete),
     })),
     trustedUpVideos: trustedUpData.videos.length,
-    trustedUpMatches: Object.values(matches).filter((match) => match.sourceType === 'trusted_up').length,
+    trustedUpMatches: Object.values(matches).filter((match) => match.sourceType?.startsWith('trusted_up')).length,
+    trustedUpSearchMatches: Object.values(matches).filter((match) => match.sourceType === 'trusted_up_search').length,
     videos: matches,
   }
   await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8')
@@ -329,6 +418,7 @@ async function main() {
     `- 指定可信 UP 主：${output.trustedUps.map((up) => `${up.name}（${up.mid}，已索引 ${up.indexedVideos}/${up.totalVideos}）`).join('；')}\n` +
     `- 已索引可信 UP 投稿：${output.trustedUpVideos}\n` +
     `- 来自可信 UP 的匹配：${output.trustedUpMatches}\n` +
+    `- 来自指定 UP 歌手搜索页的匹配：${output.trustedUpSearchMatches}\n` +
     `- 自动匹配阈值：${output.minimumConfidence}\n\n` +
     `网页只对达到阈值的条目显示站内播放入口；未匹配或低置信度条目继续使用 B 站搜索链接。BV 号可能因视频下架而失效，需定期重新运行匹配脚本。\n`, 'utf8')
   console.log(JSON.stringify({ totalSongs: output.totalSongs, matchedSongs: output.matchedSongs, trustedUpMatches: output.trustedUpMatches, fetched }))

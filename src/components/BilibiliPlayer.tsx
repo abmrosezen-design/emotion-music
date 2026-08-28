@@ -47,7 +47,7 @@ export default function BilibiliPlayer({ songTitle, video, active, onOpen, onClo
           <p className="truncate font-body text-[11px] font-medium text-white/80">正在播放：{songTitle}</p>
           <p className="mt-0.5 truncate font-body text-[9px] text-white/35">
             视频来源：{video.upName || video.author || '哔哩哔哩创作者'}
-            {video.sourceType === 'trusted_up' ? ' · 指定 UP 主' : ''}
+            {video.sourceType?.startsWith('trusted_up') ? ' · 指定 UP 主' : ''}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-1">
